@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Se termina la guerra",
+    "date": "22/11/2022",
+    "summary": "...",
+  },
+  {
+    "title": "Se termina la guerra",
+    "date": "22/11/2022",
+    "summary": "...",
+  }
+]

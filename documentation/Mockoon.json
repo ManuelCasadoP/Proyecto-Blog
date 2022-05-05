@@ -1048,6 +1048,31 @@
       "enabled": true,
       "randomResponse": false,
       "sequentialResponse": false
+    },
+    {
+      "uuid": "3f127185-143a-4710-a84b-5c7dec98d8e4",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "prueba/",
+      "responses": [
+        {
+          "uuid": "2dab35d0-f0f1-473b-9cdc-fb133b4e6844",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
     }
   ],
   "proxyMode": false,

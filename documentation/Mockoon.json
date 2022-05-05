@@ -1053,7 +1053,7 @@
       "uuid": "3f127185-143a-4710-a84b-5c7dec98d8e4",
       "documentation": "",
       "method": "get",
-      "endpoint": "prueba/",
+      "endpoint": "prueba/id",
       "responses": [
         {
           "uuid": "2dab35d0-f0f1-473b-9cdc-fb133b4e6844",

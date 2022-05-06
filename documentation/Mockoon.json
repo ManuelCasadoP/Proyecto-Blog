@@ -15,7 +15,7 @@
       "responses": [
         {
           "uuid": "ccfde8aa-21e9-463a-83d6-e986886cca4d",
-          "body": "[\r\n  {\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n  },\r\n  {\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n  },\r\n  {\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n  },\r\n  {\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n  }\r\n]",
+          "body": "[\r\n  {\r\n    \"id\": 1,\r\n    \"img\":...\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n    \"content\": \"..................\"\r\n  },\r\n  {\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n  },\r\n  {\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n  },\r\n  {\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n  }\r\n]",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -97,7 +97,7 @@
       "responses": [
         {
           "uuid": "be370c34-5b61-4d0a-aa4b-4d02e4dbfa13",
-          "body": "[\r\n  {\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n  }\r\n]",
+          "body": "[\r\n  {\r\n    \"img\":...\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n    \"content\": \"..................\"\r\n  }\r\n]",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -179,7 +179,7 @@
       "responses": [
         {
           "uuid": "fca29de4-3c1e-4240-9237-ecfc751e01eb",
-          "body": "",
+          "body": "[\r\n  {\r\n    \"img\":...\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n    \"content\": \"..................\"\r\n  }\r\n]",
           "latency": 0,
           "statusCode": 201,
           "label": "",
@@ -261,7 +261,7 @@
       "responses": [
         {
           "uuid": "ce2d384e-7fef-4519-b27f-e3951d2f52b3",
-          "body": "{}\r\n",
+          "body": "[\r\n  {\r\n    \"img\":...\r\n    \"title\": \"Se termina la guerra\",\r\n    \"date\": \"22/11/2022\",\r\n    \"summary\": \"...\",\r\n    \"content\": \"..................\"\r\n  }\r\n]\r\n",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -331,7 +331,7 @@
           "uuid": "89fca5fa-7dd5-46a0-9e59-e65e87f662a5",
           "body": "{}",
           "latency": 0,
-          "statusCode": 204,
+          "statusCode": 200,
           "label": "",
           "headers": [],
           "filePath": "",
@@ -671,7 +671,7 @@
           "uuid": "52c3a946-f1af-4074-a6bc-9589d5d54beb",
           "body": "{}",
           "latency": 0,
-          "statusCode": 204,
+          "statusCode": 200,
           "label": "",
           "headers": [],
           "filePath": "",
@@ -992,7 +992,7 @@
           "uuid": "8cd8ea8b-c6f2-42a2-955f-5825e374af68",
           "body": "{}",
           "latency": 0,
-          "statusCode": 204,
+          "statusCode": 200,
           "label": "",
           "headers": [],
           "filePath": "",
@@ -1035,31 +1035,6 @@
           "body": "{}",
           "latency": 0,
           "statusCode": 500,
-          "label": "",
-          "headers": [],
-          "filePath": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false
-        }
-      ],
-      "enabled": true,
-      "randomResponse": false,
-      "sequentialResponse": false
-    },
-    {
-      "uuid": "3f127185-143a-4710-a84b-5c7dec98d8e4",
-      "documentation": "",
-      "method": "get",
-      "endpoint": "prueba/id",
-      "responses": [
-        {
-          "uuid": "2dab35d0-f0f1-473b-9cdc-fb133b4e6844",
-          "body": "{}",
-          "latency": 0,
-          "statusCode": 200,
           "label": "",
           "headers": [],
           "filePath": "",

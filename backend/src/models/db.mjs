@@ -11,37 +11,13 @@ export const db = new sqlite3.Database('./tasks.db', (err)=>{
 db.run(`
     CREATE TABLE
         IF NOT EXISTS
-        users(
-            id INTEGER PRIMARY KEY,
-            name TEXT NOT NULL,
-            password TEXT NOT NULL
+        notices(
+            id_notice INTEGER PRIMARY KEY,
+            title TEXT NOT NULL,
+            date TEXT NOT NULL,
+            summary TEXT NOT NULL,
+            content VARCHAR(1000) NOT NULL,
         )
 `);
 
 
-db.run (`
-    CREATE TABLE
-        IF NOT EXISTS
-        tasks (
-            id INTEGER PRIMARY KEY,
-            description VARCHAR(100) NOT NULL,
-            done BOOLEAN DEFAULT false NOT NULL
-        )    
-`);
-
-/*
-db.run (`
-    CREATE TABLE
-        IF NOT EXISTS
-        tasks (
-            id INTEGER PRIMARY KEY,
-            description VARCHAR(100) NOT NULL,
-            done BOOLEAN DEFAULT false NOT NULL,
-            id_user INTEGER NOT NULL,
-            FOREIGN KEY ( id_user )
-                REFERENCES user (id)
-                    ON DELETE CASCADE
-                    ON UPDATE CASCADE
-        )    
-`);
-*/

@@ -1,4 +1,5 @@
 import express from "express";
+import { getOneNoticeController, getAllNoticesController, postNoticeController } from "./controllers/noticesController.mjs";
 const PATH_PREFIX = "/api/v0.0"
 const PORT = 3000;
 const app = express();

@@ -1,0 +1,29 @@
+.mainNoticeImg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.mainNoticeText {
+    position: relative;
+    background-color: white;
+    height: 170px;
+    width: 300px;
+    left: 460px;
+    top: 270px;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.mainNoticeTitle {
+    margin: 0px;
+    cursor: pointer;
+}
+
+.mainNoticeAuthor {
+    cursor: pointer;
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+}

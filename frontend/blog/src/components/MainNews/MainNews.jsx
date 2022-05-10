@@ -7,7 +7,7 @@ function MainNews () {
         <>
             <div className="mainNewsContainer">
                 
-                <img className="mainNewsImg" src={image} alt="" width={1080}/>
+                <img className="mainNewsImg" src={image} alt="" />
 
                 <div className="mainNewsText">
                     <h2 className="mainNewsTitle">Título Noticia Principal</h2>

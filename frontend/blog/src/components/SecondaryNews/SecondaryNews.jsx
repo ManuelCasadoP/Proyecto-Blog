@@ -1,21 +1,17 @@
 import "./secondaryNews.css";
 
-function SecondaryNews ({ title, autor, sumario, img}) {
+function SecondaryNews ({ title, author, summary, img}) {
    
     return (
         <>
             <div className="secondaryNewsContainer">
                 
-                <img className="secondaryNewsImg" src={img} alt="" width={400}/>
+                <img className="secondaryNewsImg" src={img} alt="" />
 
                 <div className="secondaryNewsText">
                     <h2 className="secondaryNewsTitle">{title}</h2>
-                    <p className="secondaryNewsAuthor">autor</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Quas harum quae modi incidunt nobis, voluptate iste qui laboriosam 
-                    et reiciendis ratione obcaecati quasi quos molestiae dolore facilis 
-                    voluptatum unde praesentium!
-                    </p>  
+                    <p className="secondaryNewsAuthor">{author}</p>
+                    <p>{summary}</p>  
                 </div>    
             </div>
         </>

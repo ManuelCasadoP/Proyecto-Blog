@@ -1,4 +1,12 @@
 .secondaryNewsContainer {
-    width: 400px;
-    padding: 10px;    
+    display: inline-flex;
+    flex-direction: column;
+    width: 540px;
+    margin: 10px;
+        
+}
+
+.secondaryNewsImg {
+    width: 540px;
+    height: 350px;
 }

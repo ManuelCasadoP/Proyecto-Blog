@@ -1,28 +1,33 @@
-.mainNoticeImg {
-    position: absolute;
+.mainNewsContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.mainNewsImg {
+    /*position: absolute;
     left: 0px;
     top: 0px;
-    z-index: -1;
+    z-index: -1;*/
     cursor: pointer;
 }
 
-.mainNoticeText {
-    position: relative;
+.mainNewsText {
+    /*position: relative;*/
     background-color: white;
     height: 170px;
     width: 300px;
-    left: 460px;
-    top: 270px;
+    /*left: 460px;
+    top: 270px;*/
     padding: 10px;
     padding-bottom: 30px;
 }
 
-.mainNoticeTitle {
+.mainNewsTitle {
     margin: 0px;
     cursor: pointer;
 }
 
-.mainNoticeAuthor {
+.mainNewsAuthor {
     cursor: pointer;
     font-family: Tahoma, sans-serif;
     font-size: 12px;

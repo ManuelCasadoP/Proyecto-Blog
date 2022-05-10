@@ -1,5 +1,5 @@
 import express from "express";
-import { getOneNoticeController, getAllNoticesController, postNoticeController } from "./controllers/noticesController.mjs";
+import { getOneNewsController, getAllNewsController, postNewsController, putNewsController, deleteNewsController } from "./controllers/newsController.mjs";
 const PATH_PREFIX = "/api/v0.0"
 const PORT = 3000;
 const app = express();
@@ -7,13 +7,17 @@ const app = express();
 try {
     app.use(express.json())  
 
-    // EndPoints para /NOTICES/
+    // EndPoints para /news/
 
-    app.get(PATH_PREFIX+"/notice/id_notice", getOneNoticeController)
+    app.get(PATH_PREFIX+"/news/id_news", getOneNewsController)
 
-    app.get(PATH_PREFIX+"/notices/", getAllNoticesController)
+    app.get(PATH_PREFIX+"/news/", getAllNewsController)
 
-    app.post(PATH_PREFIX+"/notice/", postNoticeController);
+    app.post(PATH_PREFIX+"/news/", postNewsController);
+
+    app.put(PATH_PREFIX+"/news/id_news", putNewsController);
+
+    app.delete(PATH_PREFIX+"/news/id_news", deleteNewsController);
     
     
 

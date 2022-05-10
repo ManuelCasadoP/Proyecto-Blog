@@ -11,7 +11,7 @@
       "uuid": "ba244586-112c-4da3-bfb5-473b21520686",
       "documentation": "",
       "method": "get",
-      "endpoint": "notices/",
+      "endpoint": "news/",
       "responses": [
         {
           "uuid": "ccfde8aa-21e9-463a-83d6-e986886cca4d",
@@ -93,7 +93,7 @@
       "uuid": "d5041f26-57ff-4e17-8b7a-96e4ea0dad12",
       "documentation": "",
       "method": "get",
-      "endpoint": "notice/id",
+      "endpoint": "news/id_news",
       "responses": [
         {
           "uuid": "be370c34-5b61-4d0a-aa4b-4d02e4dbfa13",
@@ -175,7 +175,7 @@
       "uuid": "d440ce51-2932-43d0-b2c5-5d71b7f2b29b",
       "documentation": "",
       "method": "post",
-      "endpoint": "notice/",
+      "endpoint": "news/",
       "responses": [
         {
           "uuid": "fca29de4-3c1e-4240-9237-ecfc751e01eb",
@@ -257,7 +257,7 @@
       "uuid": "7bb5a3f0-4abc-4dcd-b1ea-e21f40360a59",
       "documentation": "",
       "method": "put",
-      "endpoint": "notice/id",
+      "endpoint": "news/id_news",
       "responses": [
         {
           "uuid": "ce2d384e-7fef-4519-b27f-e3951d2f52b3",
@@ -325,7 +325,7 @@
       "uuid": "bcfb4e56-44fb-4b8b-a6a0-e3a284f7f154",
       "documentation": "",
       "method": "delete",
-      "endpoint": "notice/id",
+      "endpoint": "news/id_news",
       "responses": [
         {
           "uuid": "89fca5fa-7dd5-46a0-9e59-e65e87f662a5",
@@ -459,7 +459,7 @@
       "uuid": "f151a65c-a9c1-4785-96e9-c9655973fa65",
       "documentation": "",
       "method": "get",
-      "endpoint": "user/id",
+      "endpoint": "user/id_user",
       "responses": [
         {
           "uuid": "c2c8b195-cbee-434b-9656-ae22d050f5dd",
@@ -598,7 +598,7 @@
       "uuid": "11fa6f3f-1b4e-4b7a-895a-cb1ad4c142a9",
       "documentation": "",
       "method": "put",
-      "endpoint": "user/id",
+      "endpoint": "user/id_user",
       "responses": [
         {
           "uuid": "8b9a737d-8f2e-4d89-9b64-177ed49a5326",
@@ -665,7 +665,7 @@
       "uuid": "f43f59f6-6c87-4eba-8efc-12fc100679a5",
       "documentation": "",
       "method": "delete",
-      "endpoint": "user/id",
+      "endpoint": "user/id_user",
       "responses": [
         {
           "uuid": "52c3a946-f1af-4074-a6bc-9589d5d54beb",
@@ -799,7 +799,7 @@
       "uuid": "77693d38-c2af-437a-aafd-79ebd57be75c",
       "documentation": "",
       "method": "get",
-      "endpoint": "coments/notice/id",
+      "endpoint": "coments/news/id_news",
       "responses": [
         {
           "uuid": "91744b20-038a-4563-a4c0-1987470bd34d",
@@ -866,7 +866,7 @@
       "uuid": "94115487-95be-4451-b8fe-a399026de066",
       "documentation": "",
       "method": "post",
-      "endpoint": "coments/notice/id",
+      "endpoint": "coments/news/id_news",
       "responses": [
         {
           "uuid": "6a158164-27a8-4d9c-8f5d-39ad32b1102b",
@@ -933,7 +933,7 @@
       "uuid": "5c35e0ef-15a4-44c7-acc7-bf4d162a841a",
       "documentation": "",
       "method": "put",
-      "endpoint": "coments/notice/id",
+      "endpoint": "coments/news/id_news",
       "responses": [
         {
           "uuid": "c294c5df-4dd2-48ab-92ee-a86a7e3156f4",
@@ -986,7 +986,7 @@
       "uuid": "6e45ef47-9474-4079-b46c-72074b18ccd8",
       "documentation": "",
       "method": "delete",
-      "endpoint": "coments/notice/id",
+      "endpoint": "coments/news/id_news",
       "responses": [
         {
           "uuid": "8cd8ea8b-c6f2-42a2-955f-5825e374af68",

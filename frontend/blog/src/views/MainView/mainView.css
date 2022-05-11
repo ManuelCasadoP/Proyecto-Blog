@@ -1,8 +1,26 @@
-.mainView {
-    display: inline-flex;
+.mainViewContainer {
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    /*align-items: center;*/
+    background-color: white;
+    /*margin: auto;*/
+}
+
+
+.mainNewsView {
+    display: flex;
+    /*flex-direction: column;*/
+    /*flex-wrap: wrap;*/
+    /*align-items: center;*/
+    justify-content: center;
+   
+}
+
+.secondaryNewsView {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-   
 }

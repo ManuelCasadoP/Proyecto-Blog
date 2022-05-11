@@ -1,5 +1,6 @@
 import MainNews from "../../components/MainNews/MainNews"
 import SecondaryNews from "../../components/SecondaryNews/SecondaryNews"
+import "./mainView.css"
 
 import image1 from "../../imgs/Zimbawe.jpg";
 import image2 from "../../imgs/AbuSimbel.jpg";
@@ -41,14 +42,16 @@ const newsComponents = news.map(
 function MainView () {
    
     return (
-        <>
-            <div className="mainView">
-                <MainNews/>
-                {newsComponents}
+        <>  
+            <div className="mainViewContainer">
+                <div className="mainNewsView">
+                    <MainNews/>
+                </div>
+                <div className="secondaryNewsView">    
+                    {newsComponents}
+                </div>
             </div>
-                
         </>
-        
     )
 }
 

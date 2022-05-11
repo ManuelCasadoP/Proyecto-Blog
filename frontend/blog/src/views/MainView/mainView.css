@@ -1,19 +1,20 @@
 .mainViewContainer {
     display: flex;
     flex-direction: column;
-    /*flex-wrap: wrap;*/
-    /*align-items: center;*/
-    background-color: white;
+    /*flex-wrap: wrap;*/        /*Anular*/
+    /*align-items: center;*/    /*Anular*/
+    background-color: white;  /*Anular*/
     /*margin: auto;*/
 }
 
 
 .mainNewsView {
-    display: flex;
-    /*flex-direction: column;*/
-    /*flex-wrap: wrap;*/
-    /*align-items: center;*/
-    justify-content: center;
+    align-self: center;
+    /*display: flex;*/
+    /*flex-direction: column;*/ /* Anular*/
+    /*flex-wrap: wrap;*/        /*Anular*/
+    /*align-items: center;*/    /*Anular*/ 
+    /*justify-content: center;*//*Anular*/
    
 }
 

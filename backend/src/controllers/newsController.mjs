@@ -40,7 +40,7 @@ export function getAllNewsController (request, response){
 
 export function postNewsController (request, response) {
     
-    const { title, date,summary, content } = request.body;
+    const { title, date, summary, content } = request.body;
 
         db.run(
         `INSERT INTO news(title, date, summary, content) VALUES ("${title}", "${date}", "${summary}", "${content}")`,
@@ -57,7 +57,7 @@ export function postNewsController (request, response) {
         )
 }
 
-export function putNewsController(request,response){
+export function putNewsController(request, response){
     const { id_news, title, date, summary, content } = request.body;
     db.get(
         `SELECT id_news FROM news WHERE id_news=${id_news}`, 
@@ -75,9 +75,9 @@ export function putNewsController(request,response){
                             console.log(err, `Algo ha funcionado mal...`);
                             response.status(500).send(`<b>Algo ha funcionado mal. ${err}</b>`);
                         } else {
-                            console.log("La noticia se ha actualizado de la BBDD");
+                            console.log("La noticia se ha actualizado en la BBDD");
                             response.status(201).send(`<b>Solicitud Aceptada<br>
-                                                       <br>La noticia se ha actualizado correctamente de la Base de Datos.</b>`);
+                                                       <br>La noticia se ha actualizado correctamente en la Base de Datos.</b>`);
                         }
                     }
                 )

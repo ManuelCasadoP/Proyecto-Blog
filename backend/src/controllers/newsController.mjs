@@ -59,6 +59,8 @@ export function postNewsController (request, response) {
 
 export function putNewsController(){};
 
+
+
 export function deleteNewsController (request,response) {
 
     const { id_news } = request.body;

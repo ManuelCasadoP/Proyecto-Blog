@@ -4,23 +4,23 @@
 
 .mainNewsImg {
     width: 100%;
-
-    /*position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;*/
+    /*position: absolute;*/
+    /*left: 0px;
+    top: 0px;*/
+    z-index: -1;
     cursor: pointer;
 }
 
 .mainNewsText {
     /*position: relative;*/
     background-color: white;
-    height: 170px;
+    height: 180px;
     width: 300px;
     /*left: 460px;
     top: 270px;*/
-    padding: 10px;
-    padding-bottom: 30px;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 20px;
 }
 
 .mainNewsTitle {

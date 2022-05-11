@@ -1,12 +1,20 @@
 .secondaryNewsContainer {
-    display: inline-flex;
+    max-width: 30vw;
+    display: flex;
     flex-direction: column;
-    width: 540px;
-    margin: 10px;
-        
+    /*align-self: flex-start;*/
+    /*flex-wrap: wrap;*/
 }
 
 .secondaryNewsImg {
-    width: 540px;
-    height: 350px;
+    display: flex;
+    margin-left: 10px;
+    /*align-content: space-around;*/
+    width: 95%;
+    height: 70%;
+}
+
+.secondaryNewsText {
+    margin-left: 10px;
+    padding: 10px;
 }

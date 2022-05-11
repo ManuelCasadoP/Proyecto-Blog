@@ -1,6 +1,6 @@
 import "./secondaryNews.css";
 
-function SecondaryNews ({ title, author, summary, img}) {
+function SecondaryNews ({ title, author, summary, img }) {
    
     return (
         <>

@@ -57,9 +57,39 @@ export function postNewsController (request, response) {
         )
 }
 
-export function putNewsController(){};
+export function putNewsController(request,response){
+    const { id_news, title, date, summary, content } = request.body;
+    db.get(
+        `SELECT id_news FROM news WHERE id_news=${id_news}`, 
+        (err, data)=>{
+            if (err) {
+                console.log(err, `Algo ha funcionado mal...`);
+                response.status(500).send(`<b>Algo ha funcionado mal. ${err}</b>`);
 
+            } else if (data){
 
+                db.run(
+                    `UPDATE news SET title="${title}", date="${date}", summary="${summary}", content="${content}" WHERE id_news=${id_news}`,
+                    (err)=>{
+                        if (err) {
+                            console.log(err, `Algo ha funcionado mal...`);
+                            response.status(500).send(`<b>Algo ha funcionado mal. ${err}</b>`);
+                        } else {
+                            console.log("La noticia se ha actualizado de la BBDD");
+                            response.status(201).send(`<b>Solicitud Aceptada<br>
+                                                       <br>La noticia se ha actualizado correctamente de la Base de Datos.</b>`);
+                        }
+                    }
+                )
+                
+            } else {
+                console.log(`La noticia no existe...`);
+                response.status(500).send(`<b>Solicitud denegada.<br>
+                                           <br> No existe la noticia que quiere actualizar...</b>`);
+            }
+        }
+    )
+};
 
 export function deleteNewsController (request,response) {
 

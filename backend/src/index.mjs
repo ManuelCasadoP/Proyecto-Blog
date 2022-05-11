@@ -1,7 +1,7 @@
 import express from "express";
 import { getOneNewsController, getAllNewsController, postNewsController, putNewsController, deleteNewsController } from "./controllers/newsController.mjs";
 const PATH_PREFIX = "/api/v0.0"
-const PORT = 3000;
+const PORT = 4000;
 const app = express();
 
 try {

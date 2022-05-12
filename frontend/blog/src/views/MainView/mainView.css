@@ -1,7 +1,7 @@
 .mainViewContainer {
     display: flex;
     flex-direction: column;
-    max-width: 60vw;
+    max-width: 61vw;
     /*flex-wrap: wrap;*/        /*Anular*/
     /*align-items: center;*/    /*Anular*/
     background-color: white;  /*Anular*/
@@ -21,9 +21,11 @@
 }
 
 .secondaryNewsView {
+    /*margin: 10px;*/
     display: flex;
     /*flex-direction: row;*/
     flex-wrap: wrap;
     /*align-items: center;*/
-    /*justify-content: center;*/
+    justify-content:space-between;
+    
 }

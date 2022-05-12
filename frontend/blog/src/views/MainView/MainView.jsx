@@ -7,8 +7,15 @@ import image2 from "../../imgs/AbuSimbel.jpg";
 import image3 from "../../imgs/AquisQuerquennis.jpg";
 import image4 from "../../imgs/Sukhothai.jpg";
 
-
-const news = [
+const NoticiaPrincipal = [
+    {
+        title: "Noticia principal",
+        author: "autor 1",
+        summary: "Claro",
+        src: image2
+    }
+]
+const NoticiaSecundaria = [
     {
         title: "Noticia 1",
         author: "autor 1",
@@ -35,7 +42,11 @@ const news = [
     }
 ]
 
-const newsComponents = news.map(
+const mainNews = NoticiaPrincipal.map(
+    item => <MainNews title={item.title} author={item.author} summary={item.summary} img={item.src}/>  
+)
+
+const secondaryNews = NoticiaSecundaria.map(
     item => <SecondaryNews title={item.title} author={item.author} summary={item.summary} img={item.src}/>  
 )
 
@@ -45,10 +56,10 @@ function MainView () {
         <>  
             <div className="mainViewContainer">
                 <div className="mainNewsView">
-                    <MainNews/>
+                    {mainNews} 
                 </div>
                 <div className="secondaryNewsView">    
-                    {newsComponents}
+                    {secondaryNews}
                 </div>
             </div>
         </>

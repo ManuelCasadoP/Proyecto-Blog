@@ -4,21 +4,13 @@
 
 .mainNewsImg {
     width: 100%;
-    /*position: absolute;*/
-    /*left: 0px;
-    top: 0px;*/
-    z-index: -1;
     cursor: pointer;
 }
 
 .mainNewsText {
-    /*position: relative;*/
+    display: inline-flex;
+    flex-direction: column;
     background-color: white;
-    height: 180px;
-    width: 300px;
-    /*left: 460px;
-    top: 270px;*/
-    border: 1px solid black;
     margin: 0px;
     padding: 20px;
 }
@@ -32,4 +24,8 @@
     cursor: pointer;
     font-family: Tahoma, sans-serif;
     font-size: 12px;
+}
+
+.mainNewsSummary {
+    margin: 3px;
 }

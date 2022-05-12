@@ -1,5 +1,9 @@
 import sqlite3 from "sqlite3";
 
+/**
+ * Crea una base de datos
+ */
+
 export const db = new sqlite3.Database('./news.db', (err)=>{
 
     if (err) {
@@ -7,6 +11,9 @@ export const db = new sqlite3.Database('./news.db', (err)=>{
     }
     console.log("Connected to the News Database");
 });
+/**
+ * Crea la tabla de datos NEWS
+ */
 
 db.run(`
     CREATE TABLE

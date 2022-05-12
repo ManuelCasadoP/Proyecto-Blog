@@ -1,5 +1,9 @@
 import { db } from "../models/db.mjs";
 
+/**
+/*Controlador para buscar una noticia
+*/
+
 export function getOneNewsController (request, response){
 
     const { id_news } = request.body;
@@ -23,6 +27,10 @@ export function getOneNewsController (request, response){
         });
 }
 
+/**
+ * Controladores para buscar todas las noticias
+ */
+
 export function getAllNewsController (request, response){
 
     db.all(
@@ -37,6 +45,10 @@ export function getAllNewsController (request, response){
             }
         });
 }
+
+/**
+ * Controlador para enviar una noticia
+ */
 
 export function postNewsController (request, response) {
     
@@ -56,6 +68,10 @@ export function postNewsController (request, response) {
             }
         )
 }
+
+/**
+ * Controlador para modificar una noticia
+ */
 
 export function putNewsController(request, response){
     const { id_news, title, date, summary, content } = request.body;
@@ -91,6 +107,9 @@ export function putNewsController(request, response){
     )
 };
 
+/**
+ * Controlador para eliminar una noticia
+ */
 export function deleteNewsController (request,response) {
 
     const { id_news } = request.body;

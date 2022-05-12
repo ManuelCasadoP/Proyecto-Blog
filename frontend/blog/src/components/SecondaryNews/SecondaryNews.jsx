@@ -11,7 +11,7 @@ function SecondaryNews ({ title, author, summary, img }) {
                 <div className="secondaryNewsText">
                     <h2 className="secondaryNewsTitle">{title}</h2>
                     <p className="secondaryNewsAuthor">{author}</p>
-                    <p>{summary}</p>  
+                    <p className="secondaryNewsSummary">{summary}</p>  
                 </div>    
             </div>
         </>

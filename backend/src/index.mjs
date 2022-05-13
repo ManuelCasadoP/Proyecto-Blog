@@ -6,6 +6,7 @@ const app = express();
 
 try {
     app.use(express.json())  
+    app.use('/imgs/', express.static('./imgs/'));
 
     // EndPoints para /news/
 

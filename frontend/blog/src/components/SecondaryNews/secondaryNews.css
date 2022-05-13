@@ -10,6 +10,7 @@
     margin-top: 10px;
     width: 95%;
     height: 100%;
+    cursor: pointer;
 }
 
 .secondaryNewsText {
@@ -18,15 +19,18 @@
     align-self: flex-start;
     margin-left: 10px;
     padding: 10px;
+    
 
 }
 
 .secondaryNewsTitle {
     margin: 3px;
+    cursor: pointer;
 }
 
 .secondaryNewsAuthor {
     margin: 3px;
+    cursor: pointer;
 }
 
 .secondaryNewsSummary {

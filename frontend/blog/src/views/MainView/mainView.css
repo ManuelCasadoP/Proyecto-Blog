@@ -1,14 +1,72 @@
 .mainViewContainer {
     display: flex;
     flex-direction: column;
-    max-width: 78vw;
+    max-width: 97vw;
+    min-width: 250px;
     background-color: white; 
     margin: auto;
 }
 
+.headerView {
+    display: flex;
+    flex-direction: column;
+}
+
 .secondaryNewsView {
     display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    /*justify-content:space-between;*/
     
 }
+
+@media only screen and (min-width: 580px) {
+    .secondaryNewsView {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        
+    }
+ }
+ 
+ @media only screen and (min-width: 580px) {
+    .mainViewContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: 93vw;
+        background-color: white; 
+        margin: auto;
+    }
+ }    
+
+ @media only screen and (min-width: 1000px) {
+    .mainViewContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: 87vw;
+        background-color: white; 
+        margin: auto;
+    }
+ }    
+
+ @media only screen and (min-width: 1100px) {
+    .mainViewContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: 77vw;
+        background-color: white; 
+        margin: auto;
+    }
+ }    
+
+ @media only screen and (min-width: 1200px) {
+    .mainViewContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: 67vw;
+        background-color: white; 
+        margin: auto;
+    }
+ }    
+ 

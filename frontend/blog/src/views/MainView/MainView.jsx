@@ -65,7 +65,9 @@ function MainView () {
     return (
         <>  
             <div className="mainViewContainer">
-                <Header/>
+                <div className="headerView">
+                    <Header/>
+                </div>                
                 <div className="mainNewsView">
                     {mainNews} 
                 </div>

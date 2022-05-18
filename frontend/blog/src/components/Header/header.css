@@ -1,0 +1,30 @@
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: #F7F7F9;
+    height: 130px;
+    margin: 10px;
+}
+
+.headerText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+
+.headerTitle {
+    font-size: 45px;
+    letter-spacing: -4px;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-style: italic;   
+}
+
+
+span {
+    font-style: normal;
+}

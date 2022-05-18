@@ -1,6 +1,6 @@
 import "./secondaryNews.css";
 
-function SecondaryNews ({ title, author, summary, img }) {
+function SecondaryNews ({ title, date, author, summary, img }) {
    
     return (
         <>
@@ -10,7 +10,10 @@ function SecondaryNews ({ title, author, summary, img }) {
 
                 <div className="secondaryNewsText">
                     <h2 className="secondaryNewsTitle">{title}</h2>
-                    <p className="secondaryNewsAuthor">{author}</p>
+                    <div className="secondaryNewsAuthorAndDate">
+                        <p className="secondaryNewsAuthor">{author}</p>
+                        <p className="secondaryNewsDate">{date}</p>
+                    </div>
                     <p className="secondaryNewsSummary">{summary}</p>  
                 </div>    
             </div>

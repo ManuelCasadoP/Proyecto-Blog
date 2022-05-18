@@ -1,6 +1,6 @@
 import "./mainNews.css";
 
-function MainNews ({ title, author, summary, img }) {
+function MainNews ({ title, date, author, summary, img }) {
    
     return (
         <>
@@ -10,7 +10,10 @@ function MainNews ({ title, author, summary, img }) {
 
                 <div className="mainNewsText">
                     <h2 className="mainNewsTitle">{title}</h2>
-                    <p className="mainNewsAuthor">{author}</p>
+                    <div className="mainNewsAuthorAndDate">
+                        <p className="mainNewsAuthor">{author}</p>
+                        <p className="mainNewsDate">{date}</p>                    
+                    </div>
                     <p className="mainNewsSummary">{summary}</p>  
                 </div>    
             </div>

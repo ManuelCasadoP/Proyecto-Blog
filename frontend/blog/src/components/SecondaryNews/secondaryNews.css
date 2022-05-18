@@ -19,8 +19,6 @@
     align-self: flex-start;
     margin-left: 10px;
     padding: 10px;
-    
-
 }
 
 .secondaryNewsTitle {
@@ -28,9 +26,23 @@
     cursor: pointer;
 }
 
-.secondaryNewsAuthor {
+.secondaryNewsAuthorAndDate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.secondaryNewsDate {
     margin: 3px;
+    font-size: 0.8em;
+}
+
+.secondaryNewsAuthor {
     cursor: pointer;
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
 }
 
 .secondaryNewsSummary {

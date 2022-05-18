@@ -20,6 +20,19 @@
     cursor: pointer;
 }
 
+.mainNewsAuthorAndDate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.mainNewsDate {
+    margin: 3px;
+    font-size: 0.8em;
+}
+
 .mainNewsAuthor {
     cursor: pointer;
     font-family: Tahoma, sans-serif;

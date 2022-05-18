@@ -1,3 +1,4 @@
+import Header from "../../components/Header/Header";
 import MainNews from "../../components/MainNews/MainNews"
 import SecondaryNews from "../../components/SecondaryNews/SecondaryNews"
 import "./mainView.css"
@@ -64,6 +65,7 @@ function MainView () {
     return (
         <>  
             <div className="mainViewContainer">
+                <Header/>
                 <div className="mainNewsView">
                     {mainNews} 
                 </div>

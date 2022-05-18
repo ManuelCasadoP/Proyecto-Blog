@@ -16,6 +16,9 @@
 }
 
 .mainNewsTitle {
+    font-size: 2.5em;
+    line-height: 106%;
+    font-weight: 800;
     margin: 0px;
     cursor: pointer;
 }

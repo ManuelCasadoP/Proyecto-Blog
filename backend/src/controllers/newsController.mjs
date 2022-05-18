@@ -34,7 +34,7 @@ export function getOneNewsController (request, response){
 export function getAllNewsController (request, response){
 
     db.all(
-        `SELECT title, date, summary, content FROM news`,
+        `SELECT title, date, summary, content FROM news ORDER BY id_news DESC`,
         (err, data)=>{
             if (err){
                 console.log(`Algo ha funcionado mal...`, err);

@@ -1,0 +1,77 @@
+[
+{
+  "title":"Un viaje sonoro por Egipto",
+  "date":"18/05/20222",
+  "author":"Redactor_1",
+  "summary":"El país de los faraones es el destino soñado por cualquier viajero. Un lugar que suena a misterio y exotismo y que atrajo a todos los grandes estrategas de la Antigüedad. Te cuento en este nuevo podcast cómo preparar un primer viaje",
+  "content":"El topónimo Egipto sigue provocando la misma fascinación entre los viajeros actuales que suscitaba en aquellos otros decimonónicos que inventaron los viajes organizados. El país de los faraones es sinónimo de misterio, exotismo y pirámides que encierran secretos milenarios. Y nunca defrauda.
+
+Egipto es el Nilo, como le gusta recalcar a los egipcios, ya que pese a ser un país gigantesco —un millón de kilómetros de superficie; el doble que España—, la vida se circunscribe a la delgada línea verde que crece a ambas orillas del gran río. El resto es un desierto inhóspito. Egipto es también El Cairo, una ciudad insufrible, caótica, polvorienta y con un desbarajuste arquitectónico difícil de igualar, pero que, sin embargo, termina por ser subyugante y atractiva. El Cairo hay que vivirlo y conocerlo para decir que conoces el país.
+
+Pero lo que más me gusta de Egipto es lo que le fascina a todo el mundo: la posibilidad de descubrir una civilización que levantó pirámides y templos gigantescos… ¡hace más de 4.500 años! Eso no se puede ver en ningún otro lugar del mundo. Me gusta también que es un país facilísimo para el turista, ya vayas por libre o en viaje organizado. Viven del turismo y lo cuidan. Y la gente es amabilísima. Una vez un taxista paró, se bajó y me ayudó a cruzar una carretera de cuatro carriles sin semáforos ni pasos de cebra en la que llevaba más de 20 minutos atascado intentado pasar de una acera a otra.",
+  "src":"http://localhost:4000/imgs/AbuSimbel.jpg"
+},
+
+{
+  "title":"Aquis Querquennis, el campamento romano que aparece y desaparece",
+  "date":"18/05/20222",
+  "author":"Redactor_2",
+  "summary":"No son unas ruinas más. Este yacimiento de Ourense, además de ser el asentamiento militar mejor estudiado de la época, queda sumergido varios meses al año por las aguas del embalse de Las Conchas.",
+  "content":"Si de algo anda sobrada España es de restos romanos. Hispania fue una de joyas del Imperio y Roma levantó en nuestro suelo todo tipo de infraestructuras de las que han llegado a nuestros días multitud de evidencias, desde teatros a circos, pasando por anfiteatros, templos, calzadas, acueductos, termas, mansiones…. He visitado la mayoría de ellas, pero pocas me han impactado tanto como este campamento romano de la Vía Nova, al sur de la provincia de Ourense, porque pese a estar declarado bien de interés cultural, que sea visible o no depende del nivel de las aguas de un pantano.
+
+Retrocedamos un poco en la historia: la construcción y mantenimiento de las calzadas romanas movilizaba un ingente número de ingenieros y tropas. Y las obras de la Vía XVIII o Vía Nova, entre las ciudades de Bracara Augusta (actual Braga, en Portugal) y Asturica Augusta (actual Astorga) no eran una excepción. Para albergar a la cohorte de legionarios encargados de esas labores se levantó hacía el año 79 un gran campamento a orillas del río Limia, en lo que hoy es la parroquia de Baños de Bande, al sur de la provincia de Ourense.
+
+Era una fortificación notable, con una extensión de 25.000 metros cuadrados y rodeada por una sólida muralla de cinco metros de alto por tres de ancho hecha con piedra de granito sin cementar, dotada de cuatro puertas y otras tantas torres defensivas más un foso exterior de otros cinco metros de ancho. Un recinto bastante inexpugnable, vamos. Y suficiente para albergar a 600 legionarios de infantería y caballería de la Legio VII Gemina, desplazados a tal efecto desde su cuartel general en León.",
+  "src":"http://localhost:4000/imgs/AquisQuerquennis.jpg"
+},
+
+{
+  "title":"Tailandia facilita la vuelta del turismo",
+  "date":"18/05/20222",
+  "author":"Redactor_3",
+  "summary":"Desde el pasado 1 de mayo, entrar a Tailandia como turista vuelve a ser más fácil. El país, uno de los destinos más demandados en el sudeste asiático por los españoles, estuvo un año cerrado a cal y canto a los extranjeros por la pandemia. Desde julio de 2021 estaba abierto a medias con los programas Test & Go y SandBox, operativos solo en ciertas zonas de playa, pero con condiciones tan draconianas de cuarentenas y PCR obligatorios al llegar y al quinto día de estancia que fueron pocos los visitantes que se animaron a volar hasta el otro extremo del mundo para estar los cinco o siete primeros días de sus vacaciones encerrados en un hotel.
+
+Desde el pasado domingo, esos programas Test & Go y SandBox han dejado de existir a favor de un nuevo plan llamado No Quarantine. Según este, cualquier turista de cualquier nacionalidad que quiera acceder al país puede hacerlo gestionando online antes de la salida el Thailand Pass. Para rellenarlo se exige:
+
+- Certificado de vacunación con pauta completa.
+
+- En caso de no tenerlo, PCR negativo hecho máximo 72 horas antes de la llegada.
+
+- Seguro médico con cobertura mínima de 10.000 dólares.
+
+- Pasaporte en vigor.
+
+El programa contempla incluso la posibilidad de entrar sin carné de vacunación y sin test PCR, pero haciendo una cuarentena. Más información sobre esta opción, aquí.
+
+A la llegada al aeropuerto de destino hay que enseñar impreso ese código QR junto con el pasaporte. Y en un rápido trámite…. ¡estás dentro!
+
+Escribo estas líneas de Phuket, la isla más turística de Tailandia. Llevo una semana recorriendo la costa del mar de Andamán y puedo dar fe de que, aunque sin volver a las cifras de antes, el turismo empieza a recuperarse en el país de las mil sonrisas.
+
+Una gran noticia para todos los que amamos el sudeste asiático."
+  "src":"http://localhost:4000/imgs/Sukhothai.jpg"
+ },
+ {
+  "title":"Un paseo por Tbilisi",
+  "date":"18/05/20222",
+  "author":"Redactor_2",
+  "summary":"Georgia, el país que mejor entiende a Ucrania porque sufrió lo mismo, es uno de los destinos turísticos emergentes del Caúcaso. Una visita a su capital lo confirma","content":"Lorem ipsum dolor sit amet consectetur",
+  "content":"A las afueras del aeropuerto de Tbilisi, la capital de Georgia, se alza una estatua enorme con una figura humana que sujeta entre sus manos alzadas un gran sol. La figura mira hacia el norte, hacia donde queda Rusia, simbolizando que aquí el astro rey no sale por donde sale en el resto del mundo, sino por el poderoso vecino del norte. Obviamente, el monumento se levantó durante la época en que Georgia era una república soviética (1921-1991). Hoy, en el país se debate sobre si girar la figura hacia el este o derribarla de una vez por todas. Pero como de momento hay más ganas que dinero, la estatua sigue ahí, recordando que, con el comunismo, el sol salía por donde dijera el Partido, no por donde se empeñara la astronomía.
+
+La pequeña república de Georgia, situada al sur del Cáucaso —ese lugar estratégico del globo donde nunca sabes si termina Europa o empieza Asia—, con una extensión algo menor que Castilla-La Mancha y de religión mayoritaria cristiana ortodoxa, se sintió históricamente más afín y cercana a Europa que a Asia. Pero desde que en 2008 los tanques de Putin entraran en su territorio para ayudar a las regiones secesionistas de Osetia del Sur y Abjasia a independizarse, ese sentimiento paneuropeo se ha convertido en una obsesión nacional.
+
+Un buen ejemplo es la céntrica plaza de Europa, en Tbilisi, que está rodeada por altos mástiles en los que ondean banderas de Georgia y de la Unión Europea. El país no pertenece a la UE (aunque sí al Consejo de Europa), sin embargo, cuando deambulas por sus calles, no solo por esta popular plaza, es tal la profusión de banderas azules con 12 estrellas amarillas (estos días, también, de muchas banderas ucranianas) que pensarías que has llegado a la sede de alguna de las instituciones de la UE y no un a un país ajeno, tales son las muestras de amor al proyecto europeísta."
+  "src":"http://localhost:4000/imgs/Tbilisi.jpg"
+ },
+ {
+  "title":"10 cosas que ver y hacer en Zimbabue",
+  "date":"18/05/20222",
+  "author":"Redactor_3",
+  "summary":"Es uno de los países más desconocidos y menos turísticos del sur de África. Sin embargo, está repleto de lugares de interés. Incluida la mejor vista de las cataratas Victoria",
+  "content":"Cuando alguien se plantea hacer un safari por África, Zimbabue no suele aparecer en la lista de candidatos. Eclipsado por otros países con muchos más años de tradición turística, como Tanzania o Sudáfrica, y lastrado por unos indicadores económicos que lo sitúan entre los países más pobres del mundo, esta república del sudeste de África enclavada entre dos ríos míticos, el Zambeze y el Limpopo, suena a destino solo para viajeros muy bragados en busca de emociones fuertes.  
+
+Sin embargo, nada más lejos de la realidad. Aunque en la década del 2000 llegó a sufrir una inflación del 89.700 millones por ciento y acaba de salir de una de las dictaduras más férreas y largas del continente (la de Robert Mugabe), la percepción sobre el terreno es que Zimbabue no es tan pobre como podría parecer por esas cifras. Hoy cuenta con 17 universidades, una red de carreteras más que aceptable, supermercados bien provistos y educación universal. Tampoco carece de lugares de interés, todo lo contrario: en sus fronteras está la ribera más fotogénica y espectacular de las cataratas Victoria. Cuenta con las ruinas arqueológicas más enigmáticas al sur del Sáhara (Great Zimbabwe). Y uno de sus parques nacionales, el de Hwange, está reconocido entre los 10 mejores del continente africano para ver fauna salvaje.
+
+He estado en el país en varias ocasiones, la última hace apenas un mes con un grupo de El País Viajes. Y de esos recorridos he compuesto este vídeo con los 10 lugares y experiencias imprescindibles en un lugar desconocido pero lleno de lugares apetecibles para un viajero.",
+  "src":"http://localhost:4000/imgs/Zimbawe.jpg"
+}
+]

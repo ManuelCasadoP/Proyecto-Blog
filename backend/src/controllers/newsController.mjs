@@ -9,7 +9,7 @@ export function getOneNewsController (request, response){
     const { id_news } = request.body;
 
     db.get(
-        `SELECT title, date, summary, content FROM news WHERE id_news=${id_news}`,
+        `SELECT title, date, author, summary, content, src FROM news WHERE id_news=${id_news}`,
         (err, data)=>{
             if (err){
                 console.log(`Algo ha funcionado mal...`, err);
@@ -34,7 +34,7 @@ export function getOneNewsController (request, response){
 export function getAllNewsController (request, response){
 
     db.all(
-        `SELECT title, date, summary, content FROM news ORDER BY id_news DESC`,
+        `SELECT title, date, author, summary, content, src FROM news ORDER BY id_news DESC`,
         (err, data)=>{
             if (err){
                 console.log(`Algo ha funcionado mal...`, err);
@@ -52,10 +52,10 @@ export function getAllNewsController (request, response){
 
 export function postNewsController (request, response) {
     
-    const { title, date, summary, content } = request.body;
+    const { title, date, author, summary, content, src } = request.body;
 
         db.run(
-        `INSERT INTO news(title, date, summary, content) VALUES ("${title}", "${date}", "${summary}", "${content}")`,
+        `INSERT INTO news(title, date, author, summary, content, src) VALUES ("${title}", "${date}", "${author}", "${summary}", "${content}", "${src}")`,
             (err)=>{
                 if (err) {
                     console.log(`Algo ha funcionado mal...`, err);
@@ -74,7 +74,7 @@ export function postNewsController (request, response) {
  */
 
 export function putNewsController(request, response){
-    const { id_news, title, date, summary, content } = request.body;
+    const { id_news, title, date, author, summary, content, src } = request.body;
     db.get(
         `SELECT id_news FROM news WHERE id_news=${id_news}`, 
         (err, data)=>{
@@ -85,7 +85,7 @@ export function putNewsController(request, response){
             } else if (data){
 
                 db.run(
-                    `UPDATE news SET title="${title}", date="${date}", summary="${summary}", content="${content}" WHERE id_news=${id_news}`,
+                    `UPDATE news SET title="${title}", date="${date}", author="${author}", summary="${summary}", content="${content}", src="${src}" WHERE id_news=${id_news}`,
                     (err)=>{
                         if (err) {
                             console.log(err, `Algo ha funcionado mal...`);

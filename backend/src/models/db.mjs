@@ -21,9 +21,11 @@ db.run(`
         news(
             id_news INTEGER PRIMARY KEY,
             title TEXT NOT NULL,
+            author TEXT NOT NULL,
             date TEXT NOT NULL,
             summary TEXT NOT NULL,
-            content VARCHAR(1000) NOT NULL
+            content VARCHAR(1000) NOT NULL,
+            src TEXT NOT NULL
         )
 `);
 

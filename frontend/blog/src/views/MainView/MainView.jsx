@@ -7,18 +7,30 @@ import "./mainView.css"
 const BACKENDURL="http://localhost:4000/";
 
 
-
 function MainView () {
 
     const [NoticiaPrincipal, SetNoticiaPrincipal] = useState([])
     const [NoticiaSecundaria, SetNoticiaSecundaria] = useState([])
 
     useEffect(() => {   
-        fetch(BACKENDURL+"/api/v0.0/news")
-	.then ((data)=>data.json()
-	.then((readData)=>SetNoticiaPrincipal(readData.splice(1,1)),
-                    SetNoticiaSecundaria(readData.splice(2,4))
-    ))
+
+        fetch(BACKENDURL+"api/v0.0/news")
+            .then (
+                data=>data.json()
+                .then(
+                    readData => {
+                        //const getNoticias = readData;
+                        //const mainNews = getNoticias.splice(1,1)
+                        //const secondNews = getNoticias.splice(1,4)
+                        //const mainNews = readData.splice(1,1)
+                        //const secondNews = readData.splice(1,4)
+                        //SetNoticiaPrincipal(mainNews)
+                        //SetNoticiaSecundaria(secondNews)
+                        //SetNoticiaPrincipal(getNoticias.splice(1,1))
+                        //SetNoticiaSecundaria(getNoticias.splice(1,4))
+                        SetNoticiaPrincipal(readData.splice(0,1))
+                        SetNoticiaSecundaria(readData.splice(0,4))
+            }))
       }, []);
 
     const mainNews = NoticiaPrincipal.map(

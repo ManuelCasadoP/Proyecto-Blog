@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import MainNews from "../../components/MainNews/MainNews"
 import SecondaryNews from "../../components/SecondaryNews/SecondaryNews"
 import "./mainView.css"
+import FullPageNews from '../FullPageNews/FullPageNews';
 
 const BACKENDURL="http://localhost:4000/";
 
@@ -34,11 +35,11 @@ function MainView () {
       }, []);
 
     const mainNews = NoticiaPrincipal.map(
-        item => <MainNews key={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} img={item.src}/>  
+        (item,idx) => <MainNews key={idx} id_news={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} img={item.src}/>  
     )
     
     const secondaryNews = NoticiaSecundaria.map(
-        item => <SecondaryNews key={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} img={item.src}/>  
+        (item,idx) => <SecondaryNews key={idx} id_news={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} img={item.src}/>  
     )
 
    
@@ -54,6 +55,7 @@ function MainView () {
                 <div className="secondaryNewsView">    
                     {secondaryNews}
                 </div>
+                    <FullPageNews/>
             </div>
         </>
     )

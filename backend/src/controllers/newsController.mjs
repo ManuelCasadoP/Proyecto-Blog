@@ -9,7 +9,7 @@ export function getOneNewsController (request, response){
     const { id_news } = request.body;
 
     db.get(
-        `SELECT title, date, author, summary, content, src FROM news WHERE id_news=${id_news}`,
+        `SELECT id_news, title, date, author, summary, content, src FROM news WHERE id_news=${id_news}`,
         (err, data)=>{
             if (err){
                 console.log(`Algo ha funcionado mal...`, err);
@@ -34,7 +34,7 @@ export function getOneNewsController (request, response){
 export function getAllNewsController (request, response){
 
     db.all(
-        `SELECT title, date, author, summary, content, src FROM news ORDER BY id_news DESC`,
+        `SELECT id_news, title, date, author, summary, content, src FROM news ORDER BY id_news DESC`,
         (err, data)=>{
             if (err){
                 console.log(`Algo ha funcionado mal...`, err);

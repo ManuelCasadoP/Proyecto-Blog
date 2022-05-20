@@ -6,7 +6,7 @@ function MainNews ({ title, date, author, summary, img }) {
         <>
             <div className="mainNewsContainer">
                 
-                <img className="mainNewsImg" src={img} alt="" />
+                <img className="mainNewsImg" src={img} alt=""/>
 
                 <div className="mainNewsText">
                     <h2 className="mainNewsTitle">{title}</h2>

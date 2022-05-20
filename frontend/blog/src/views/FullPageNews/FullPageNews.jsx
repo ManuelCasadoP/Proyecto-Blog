@@ -4,9 +4,10 @@ import Header from "../../components/Header/Header"
 function FullPageNews({ id_news, title, date, author, summary, img, content }){
     return(
 
-        <>
-        <Header/>
-        <div className="fullPageNewsContainer">
+        <>        
+            <div className="fullPageNewsContainer">
+            
+            <Header/>
 
             <p>Noticia Ampliada</p>
 

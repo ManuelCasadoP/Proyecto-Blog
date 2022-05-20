@@ -1,15 +1,18 @@
 import "./mainNews.css";
+import { Link } from "react-router-dom";
 
-function MainNews ({ title, date, author, summary, img }) {
+function MainNews ({ id_news, title, date, author, summary, img }) {
    
     return (
         <>
             <div className="mainNewsContainer">
-                
-                <img className="mainNewsImg" src={img} alt=""/>
-
+                <Link to={`/news/${id_news}`}>
+                    <img className="mainNewsImg" src={img} alt=""/>
+                </Link> 
                 <div className="mainNewsText">
-                    <h2 className="mainNewsTitle">{title}</h2>
+                    <Link to={`/news/${id_news}`}>
+                        <h2 className="mainNewsTitle">{title}</h2>
+                    </Link> 
                     <div className="mainNewsAuthorAndDate">
                         <p className="mainNewsAuthor">{author}</p>
                         <p className="mainNewsDate">{date}</p>                    

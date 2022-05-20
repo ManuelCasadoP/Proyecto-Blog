@@ -1,5 +1,5 @@
 import Header from "../../components/Header/Header"
-
+import "./fullPageNews.css"
 
 function FullPageNews({ id_news, title, date, author, summary, img, content }){
     return(

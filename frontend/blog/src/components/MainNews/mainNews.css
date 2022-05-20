@@ -21,6 +21,11 @@
     font-weight: 800;
     margin: 0px;
     cursor: pointer;
+    color: black;
+}
+
+a{
+    text-decoration: none;
 }
 
 .mainNewsAuthorAndDate {

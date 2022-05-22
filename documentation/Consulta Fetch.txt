@@ -17,3 +17,12 @@ getNoticias("http://localhost:4000/api/v0.0/news");
 const getNoticias = fetch("http://localhost:4000/api/v0.0/news")
 	.then ((data)=>data.json()
 	.then((readData)=>{const allNews = readData}));
+
+-------------------------------------------------------------------
+
+const pathnameActual = window.location.pathname;
+    const UrlEnPartes = pathnameActual.split("/");
+    const id = UrlEnPartes.splice(2,1);
+
+    const UrlId = Object.values(id);
+

@@ -21,7 +21,9 @@
 h1 {
     font-family: 'Merriweather', serif;
     font-weight: 300;
-    font-style: italic;   
+    font-style: italic; 
+    cursor: pointer;
+    color: black;  
 }
 
 

@@ -1,4 +1,5 @@
 import "./header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
    
@@ -6,7 +7,9 @@ function Header() {
         <>
             <div className="headerContainer">                
                 <div className="headerText">
-                    <h1 className="headerTitle">El blog <span><b>de viajes</b></span></h1>
+                    <Link to={`/`}>
+                        <h1 className="headerTitle">El blog <span><b>de viajes</b></span></h1>
+                    </Link>
                     <div className="headerAuthorBlock">
                         <p className="headerAuthorPrep"></p>
                         <p className="headerAuthorName"></p>                    

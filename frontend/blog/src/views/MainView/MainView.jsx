@@ -3,7 +3,6 @@ import Header from "../../components/Header/Header";
 import MainNews from "../../components/MainNews/MainNews"
 import SecondaryNews from "../../components/SecondaryNews/SecondaryNews"
 import "./mainView.css"
-import FullPageNews from '../FullPageNews/FullPageNews';
 
 const BACKENDURL="http://localhost:4000/";
 
@@ -55,7 +54,6 @@ function MainView () {
                 <div className="secondaryNewsView">    
                     {secondaryNews}
                 </div>
-                    <FullPageNews/>
             </div>
         </>
     )

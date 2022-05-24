@@ -6,7 +6,7 @@ import { db } from "../models/db.mjs";
 
 export function getOneNewsController (request, response){
 
-    const { id_news } = request.body;
+    const { id_news } = request.params;
 
     db.get(
         `SELECT id_news, title, date, author, summary, content, src FROM news WHERE id_news=${id_news}`,

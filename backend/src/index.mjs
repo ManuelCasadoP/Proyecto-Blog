@@ -10,7 +10,7 @@ try {
 
     // EndPoints para /news/
 
-    app.get(PATH_PREFIX+"/news/id_news", getOneNewsController)
+    app.get(PATH_PREFIX+"/news/:id_news", getOneNewsController)
 
     app.get(PATH_PREFIX+"/news/", getAllNewsController)
 

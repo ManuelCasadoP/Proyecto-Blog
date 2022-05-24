@@ -1,3 +1,9 @@
+.headerLogin {
+    height: 35px;
+}
+
+
+
 .headerContainer {
     display: flex;
     flex-direction: row;

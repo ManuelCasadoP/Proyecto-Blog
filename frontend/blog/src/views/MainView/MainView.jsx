@@ -34,11 +34,11 @@ function MainView () {
       }, []);
 
     const mainNews = NoticiaPrincipal.map(
-        (item,idx) => <MainNews key={idx} id_news={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} img={item.src}/>  
+        (item,idx) => <MainNews key={idx} id_news={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} src={item.src}/>  
     )
     
     const secondaryNews = NoticiaSecundaria.map(
-        (item,idx) => <SecondaryNews key={idx} id_news={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} img={item.src}/>  
+        (item,idx) => <SecondaryNews key={idx} id_news={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} src={item.src}/>  
     )
 
    

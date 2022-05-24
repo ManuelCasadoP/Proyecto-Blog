@@ -7,18 +7,17 @@ import "./fullPageNews.css"
 
 const BACKENDURL="http://localhost:4000/";
 
-function FullPageNews({ title, date, author, summary, src, content }){
+function FullPageNews(){
 
-    const[NoticiaCompleta, SetNoticiaCompleta]= useState([])
+    const [ NoticiaCompleta, SetNoticiaCompleta ]= useState({})
 
-    /*const pathnameActual = window.location.pathname;
+  /*const pathnameActual = window.location.pathname;
     const UrlEnPartes = pathnameActual.split("/");
     const id = UrlEnPartes[0];
     console.log(id)*/
 
     const params = useParams();
-
-    /*console.log(params.id_news);*/
+  /*console.log(params.id_news);*/
 
     
 
@@ -32,7 +31,7 @@ function FullPageNews({ title, date, author, summary, src, content }){
                         SetNoticiaCompleta(readData)
                     
             }))
-      }, []);
+      }, [params.id_news]);
 
     return(
 
@@ -41,7 +40,7 @@ function FullPageNews({ title, date, author, summary, src, content }){
             
             <Header/>
 
-            <h2 className="fullPageNewsTitle">{NoticiaCompleta.title}</h2>
+            <h1 className="fullPageNewsTitle">{NoticiaCompleta.title}</h1>
             <p className="fullPageNewsSummary">{NoticiaCompleta.summary}</p> 
             <img className="fullPageNewsImg" src={NoticiaCompleta.src} alt=""/>
             <p className="fullPageNewsAuthor">{NoticiaCompleta.author}</p>

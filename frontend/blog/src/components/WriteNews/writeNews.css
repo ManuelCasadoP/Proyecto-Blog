@@ -3,4 +3,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 500px;
+    margin: auto;
+    padding-top: 50px ;
+
+}
+.writeNewsContainer > textarea{
+    width: 500px;
+}
+
+.writeNewsContainer > input {
+    width: 500px;
+    height: 20px;
+}
+.writeNewsInput{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.writeNewsLabel{
+    align-self: start;
+}
+.writeNewsButton{
+    margin: 0px;
+    margin-top: 10px;
+    height: 30px;
+    background-color: chartreuse;
+    align-self: start;
+    border: 1px solid green;
+    border-radius: 4px;
 }

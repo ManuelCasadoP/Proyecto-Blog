@@ -52,7 +52,10 @@ export function getAllNewsController (request, response){
 
 export function postNewsController (request, response) {
     
-    const { title, date, author, summary, content, src } = request.body;
+
+    const { title, date, author, summary, content } = request.body;
+    
+    const src = 'http://localhost:4000/imgs/'+request.file.filename;
 
         db.run(
         `INSERT INTO news(title, date, author, summary, content, src) VALUES ("${title}", "${date}", "${author}", "${summary}", "${content}", "${src}")`,

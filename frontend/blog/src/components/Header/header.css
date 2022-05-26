@@ -7,9 +7,10 @@
 .headerContainer {
     display: flex;
     flex-direction: row;
-    background-color: #F7F7F9;
+    background-color: #e7e7ed;
     height: 100px;
     margin: 0px;
+    margin-bottom: 10px;
 }
 
 .headerText {

@@ -1,18 +1,19 @@
 //import { validate } from "jsonschema";
+/*
+import { postUserRegisterSchema } from "../schemas/userSchema.mjs";
 
-import { postUserLoginSchema } from "../schemas/userSchema.mjs";
-
-export function validateUserLogin ( request, response, next) {
+export function validateUserRegister ( request, response, next) {
     try {
-        const validation = validate(request.body, postUserLoginSchema)
+        const validation = validate(request.body, postUserRegisterSchema)
         if (validation.valid) {
             next();
         } else {
             response.status(400);
-            response.send("<b>JSON USER LOGIN schema error:<br><br> Invalid User data provided</b>");
-            console.error("JSON USER LOIN schema error: \n Invalid User data provided");
+            response.send("<b>USER REGISTER schema error:<br><br> Invalid User data provided</b>");
+            console.error("USER REGISTER schema error: \n Invalid User data provided");
         }
     } catch (err) {
-        throw "User Login Schema: Error validating data"
+        throw "User Register Schema: Error validating data"
     }
 }
+*/

@@ -1,7 +1,7 @@
 import express from "express";
 import { getOneNewsController, getAllNewsController, postNewsController, putNewsController, deleteNewsController } from "./controllers/newsController.mjs";
-import { postUsersLoginController } from "./controllers/usersController.mjs";
-import { validateUserLogin } from "./middleware/userValidatorSchema.mjs";
+import { userRegisterController, getAllUsersController, deleteUserController } from "./controllers/usersController.mjs";
+//import { validateUserRegister } from "./middleware/userValidatorSchema.mjs";
 import multer from "multer";
 const PATH_PREFIX = "/api/v0.0"
 const PORT = 4000;
@@ -28,7 +28,11 @@ try {
 
     // EndPoints para /users/
 
-    app.post(PATH_PREFIX+"/users/", validateUserLogin, postUsersLoginController);
+    app.get(PATH_PREFIX+"/users/", getAllUsersController);
+
+    app.post(PATH_PREFIX+"/users/register", userRegisterController);
+
+    app.delete(PATH_PREFIX+"/users/id_user", deleteUserController);
     
    
 

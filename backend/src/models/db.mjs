@@ -29,4 +29,19 @@ db.run(`
         )
 `);
 
+/**
+ * Crea la tabla de datos USERS
+ */
+
+ db.run(`
+ CREATE TABLE
+     IF NOT EXISTS
+     users(
+         id_user INTEGER PRIMARY KEY,
+         email TEXT UNIQUE NOT NULL,
+         name TEXT NOT NULL,
+         password TEXT NOT NULL
+    )
+`);
+
 

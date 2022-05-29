@@ -146,6 +146,3 @@ export function deleteNewsController (request,response) {
         }
     )
 }
-        
-
-// Controladores para USUARIOS

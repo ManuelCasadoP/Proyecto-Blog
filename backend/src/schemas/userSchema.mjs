@@ -1,9 +1,9 @@
-export const postUserLoginSchema = {
+export const postUserRegisterSchema = {
     $id: "/user",
     type: "object",
     properties: {
         email: {
-            description: "Unique userName",
+            description: "Unique email",
             type: "string",
             unique: true,
             lowercase: true,

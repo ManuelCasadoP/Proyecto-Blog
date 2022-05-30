@@ -1,6 +1,6 @@
 import express from "express";
 import { getOneNewsController, getAllNewsController, postNewsController, putNewsController, deleteNewsController } from "./controllers/newsController.mjs";
-import { userRegisterController, getAllUsersController, deleteUserController } from "./controllers/usersController.mjs";
+import { userRegisterController, userLoginController, getAllUsersController, deleteUserController } from "./controllers/usersController.mjs";
 //import { validateUserRegister } from "./middleware/userValidatorSchema.mjs";
 import multer from "multer";
 const PATH_PREFIX = "/api/v0.0"
@@ -31,6 +31,8 @@ try {
     app.get(PATH_PREFIX+"/users/", getAllUsersController);
 
     app.post(PATH_PREFIX+"/users/register", userRegisterController);
+
+    app.post(PATH_PREFIX+"/users/login", userLoginController);
 
     app.delete(PATH_PREFIX+"/users/id_user", deleteUserController);
     

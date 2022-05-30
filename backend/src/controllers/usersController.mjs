@@ -1,5 +1,5 @@
 import { db } from "../models/db.mjs";
-//import bcrypt from 'bcrypt';
+import bcrypt from 'bcrypt';
 
 
 /**
@@ -9,8 +9,7 @@ export function userRegisterController (request, response) {
     
     const { email, name, password } = request.body;
 
-    //const salt = bcrypt.genSalt(10);
-    //const pass =  bcrypt.hash(password, 10);
+    const pass =  bcrypt.hashSync(password, 10);
 
     db.get(
         `SELECT email FROM users WHERE email="${email}"`,
@@ -43,6 +42,53 @@ export function userRegisterController (request, response) {
     )
 }
 
+/**
+ *  Controlador para login de usuario.
+ */
+ export function userLoginController (request, response) {
+    
+    const { email, password } = request.body;
+
+    db.get(
+        `SELECT email FROM users WHERE email="${email}"`,
+        (err, data)=>{
+            if (err) {
+                console.log(`Algo ha funcionado mal...`, err);
+                response.status(500).send(`<b>Algo ha funcionado mal:<br>${err}</b>`);
+            } else if (!data){
+                console.log("No existe ningun usuario registrado con ese email.");
+                response.status(401).send(`<b>Solicitud denegada. <br>
+                                           <br> No se puede realizar la operación porque no existe ningun usuario con ese email.<br>
+                                           <br> Intente hacer login con un email distinto.</b>`);
+            } else if (data){
+
+                db.get(
+                    `SELECT password FROM users WHERE email="${email}"`,
+                        (err)=>{
+                            if (err) {
+                                console.log(`Algo ha funcionado mal...`, err);
+                                response.status(500).send(`<b>Algo ha funcionado mal:<br>${err}</b>`);
+                                    } else if (data){
+                                        console.log (data.email);
+                                        console.log (password)
+                                        const pass = bcrypt.compareSync(password, data.email);
+                                        if(pass===true) {
+                                            console.log("Login de usuario correcto");
+                                        response.status(200).send(`<b>Solicitud Aceptada<br>
+                                                                   <br>Login de usuario correcto.</b>`);
+
+                                        } else{
+                                            console.log("Password incorrecto");
+                                        response.status(400).send(`<b>Solicitud denegada<br>
+                                                                   <br>Password incorrecto.</b>`);
+                                        }                            
+                                    }
+                    }
+                )
+            }
+        }
+    )
+}
 
 /**
  * Controlador para listar todos los usuarios.

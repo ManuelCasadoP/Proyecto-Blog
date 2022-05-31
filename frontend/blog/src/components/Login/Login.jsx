@@ -1,5 +1,5 @@
 import "./login.css";
-//import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import{ useState } from 'react';
 
 export default function Login() {
@@ -70,6 +70,11 @@ export default function Login() {
 								<input className="loginInput" type="password" name="password" value={password} onChange={getInfo}/>
 										
 								<button className="loginButton" type="submit">Entrar</button>
+                                <br /><br />
+
+                                <Link to={`/register`}>
+                                     <p>Si no tienes todavia, crea tu cuenta</p>
+                                </Link>
 
 							</form>	
 						</div>

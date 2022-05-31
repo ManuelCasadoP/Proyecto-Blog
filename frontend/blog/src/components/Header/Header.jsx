@@ -8,6 +8,9 @@ function Header() {
             <Link to={`/write/`}>
                 <button className="headerLoginButton" >Redactar noticia</button>
             </Link>
+            <Link to={`/login/`}>
+                <button className="headerLoginButton" >Iniciar sesion</button>
+            </Link>
             </div>
             <div className="headerContainer"> 
                               

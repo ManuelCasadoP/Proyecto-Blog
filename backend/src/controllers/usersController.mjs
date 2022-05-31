@@ -64,14 +64,14 @@ export function userRegisterController (request, response) {
 
                 db.get(
                     `SELECT password FROM users WHERE email="${email}"`,
-                        (err)=>{
+                        (err, data)=>{
                             if (err) {
                                 console.log(`Algo ha funcionado mal...`, err);
                                 response.status(500).send(`<b>Algo ha funcionado mal:<br>${err}</b>`);
                                     } else if (data){
-                                        console.log (data.email);
+                                        console.log (data.password);
                                         console.log (password)
-                                        const pass = bcrypt.compareSync(password, data.email);
+                                        const pass = bcrypt.compareSync(password, data.password);
                                         if(pass===true) {
                                             console.log("Login de usuario correcto");
                                         response.status(200).send(`<b>Solicitud Aceptada<br>

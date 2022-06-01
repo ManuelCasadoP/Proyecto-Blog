@@ -54,8 +54,8 @@ export default function Register() {
 				body: data
 			}
 		);
-		const responseData = await response.json();
-		console.log(responseData);
+		//const responseData = await response.json();
+		//console.log(responseData);
 		console.log("Se ha registrado un usuario" );
 	}
    

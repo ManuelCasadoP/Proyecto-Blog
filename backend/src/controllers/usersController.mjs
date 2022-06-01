@@ -85,7 +85,7 @@ export function userRegisterController (request, response) {
                                               );
                                         console.log (token);
                                         response.status(200).json({
-                                            message: `<b>Solicitud Aceptada<br><br>Login de usuario correcto.</b>`,
+                                            message: `<b>Login de usuario correcto.</b>`,
                                             token: token
                                         });
                                         //response.status(200).send(`<b>Solicitud Aceptada<br><br>Login de usuario correcto.</b>`);

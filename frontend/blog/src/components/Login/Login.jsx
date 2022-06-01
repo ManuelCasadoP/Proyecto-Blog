@@ -54,8 +54,11 @@ export default function Login() {
 			}
 		);
 		const responseData = await response.json();
-		console.log(responseData);
+		sessionStorage.setItem("token",responseData.token);
+		console.log(responseData.message);
+		console.log(responseData.token);
 		console.log("Usuario logueado" );
+	
 	}
    
     return (

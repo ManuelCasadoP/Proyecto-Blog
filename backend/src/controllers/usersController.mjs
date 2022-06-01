@@ -1,6 +1,8 @@
 import { db } from "../models/db.mjs";
 import bcrypt from 'bcrypt';
-
+import jwt from 'jsonwebtoken';
+import  'dotenv/config';
+import  express  from  'express';
 
 /**
  *  Controlador para registrar un usuario.
@@ -33,7 +35,7 @@ export function userRegisterController (request, response) {
                                     } else {
                                         console.log("Usuario añadido a BBDD");
                                         response.status(201).send(`<b>Solicitud Aceptada<br>
-                                                                   <br>El usuario se ha añadido correctamente a la Base de Datos.</b>`);
+                                        <br>El usuario se ha añadido correctamente a la Base de Datos.</b>`);
                                     }
                     }
                 )
@@ -74,13 +76,23 @@ export function userRegisterController (request, response) {
                                         const pass = bcrypt.compareSync(password, data.password);
                                         if(pass===true) {
                                             console.log("Login de usuario correcto");
-                                        response.status(200).send(`<b>Solicitud Aceptada<br>
-                                                                   <br>Login de usuario correcto.</b>`);
+                                            const token = jwt.sign(
+                                                {email},
+                                                process.env.TOKEN_KEY,
+                                                {
+                                                  expiresIn: "2h",
+                                                }
+                                              );
+                                        console.log (token);
+                                        response.status(200).json({
+                                            message: `<b>Solicitud Aceptada<br><br>Login de usuario correcto.</b>`,
+                                            token: token
+                                        });
+                                        //response.status(200).send(`<b>Solicitud Aceptada<br><br>Login de usuario correcto.</b>`);
 
                                         } else{
                                             console.log("Password incorrecto");
-                                        response.status(400).send(`<b>Solicitud denegada<br>
-                                                                   <br>Password incorrecto.</b>`);
+                                        response.status(400).send(`<b>Solicitud denegada<br><br>Password incorrecto.</b>`);
                                         }                            
                                     }
                     }

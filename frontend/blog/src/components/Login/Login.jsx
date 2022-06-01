@@ -35,7 +35,6 @@ export default function Login() {
 			post(host, data);
 			setError(false);
 		}
-		
 	}
 
 
@@ -54,11 +53,12 @@ export default function Login() {
 			}
 		);
 		const responseData = await response.json();
-		sessionStorage.setItem("token",responseData.token);
+		sessionStorage.setItem("token", responseData.token);
+		document.location.href = '/';
 		console.log(responseData.message);
 		console.log(responseData.token);
 		console.log("Usuario logueado" );
-	
+		
 	}
    
     return (

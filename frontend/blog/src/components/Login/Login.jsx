@@ -47,6 +47,9 @@ export default function Login() {
 			url,
 			{
 				method: 'POST',
+				headers: {
+					"Content-Type": "application/json"
+				},
 				body: data
 			}
 		);

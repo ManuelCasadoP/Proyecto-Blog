@@ -48,6 +48,9 @@ export default function Register() {
 			url,
 			{
 				method: 'POST',
+				headers: {
+					"Content-Type": "application/json"
+				},
 				body: data
 			}
 		);
@@ -67,7 +70,7 @@ export default function Register() {
 								<label className="registerLabel" htmlFor="email"> Correo electronico </label>
 								<input className="registerInput" type="text" name="email" value={email} onChange={getInfo}/>
 								
-                                <label className="registerLabel" htmlFor="name"> Correo electronico </label>
+                                <label className="registerLabel" htmlFor="name"> Nombre </label>
 								<input className="registerInput" type="text" name="name" value={name} onChange={getInfo}/>
 										
 								<label className="registerLabel" htmlFor="password"> Contraseña </label>

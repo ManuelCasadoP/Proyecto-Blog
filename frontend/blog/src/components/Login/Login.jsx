@@ -62,6 +62,7 @@ export default function Login() {
 			sessionStorage.setItem("token", responseData.token);
 			console.log(responseData.message);
 			console.log(responseData.token);
+			console.log("Login de usuario correcto" )
 			swal({
 				title: "Login correcto!!!",
 				text: "Pulse OK para continuar....",
@@ -73,24 +74,25 @@ export default function Login() {
 			});
 			
 		} else if (response.status===401){	
+			console.log("Login de usuario incorrecto")
 			swal({
 				title: "Login incorrecto!!!",
-				text: "Pulse OK para reintentar o registrese....",
+				text: "Pulse Aceptar para reintentar o crear una cuenta....",
 				icon: "warning",
+				button: "Aceptar"
 			})
 			.then(ok => {
 				if (ok) {document.location.href = '/login';
 				}
 			});
 		} else {
+			console.log("Error gravísiiimo de sabe D10S qué...!!!")
 			swal({
 				title: "ERROR !!!",
 				text: "Ha ocurrido un fallo general, intentelo mas tarde.",
 				icon: "warning",
 			})
 		}	
-		
-		console.log("Usuario logueado" );
 	}
    
     return (

@@ -1,4 +1,5 @@
 import "./login.css";
+import swal from 'sweetalert';
 import {Link} from "react-router-dom";
 import{ useState } from 'react';
 
@@ -54,7 +55,23 @@ export default function Login() {
 		);
 		const responseData = await response.json();
 		sessionStorage.setItem("token", responseData.token);
-		document.location.href = '/';
+		if(responseData.token){
+			swal({
+				title: "Login correcto!!!",
+				text: "Pulse OK para continuar....",
+				icon: "success",
+			})
+			.then(ok => {
+				if (ok) {document.location.href = '/';
+				}
+			});
+		}else{	
+			swal({
+				title: "Login incorrecto!!!",
+				text: "Pulse OK para reintentar o registrese....",
+				icon: "warning",
+			})
+		}
 		console.log(responseData.message);
 		console.log(responseData.token);
 		console.log("Usuario logueado" );

@@ -53,9 +53,15 @@ export default function Login() {
 				body: data
 			}
 		);
-		const responseData = await response.json();
-		sessionStorage.setItem("token", responseData.token);
-		if(responseData.token){
+		
+		console.log(response.status);
+		//const responseData = await response.json();
+
+		if(response.status===200){
+			const responseData = await response.json();
+			sessionStorage.setItem("token", responseData.token);
+			console.log(responseData.message);
+			console.log(responseData.token);
 			swal({
 				title: "Login correcto!!!",
 				text: "Pulse OK para continuar....",
@@ -65,17 +71,26 @@ export default function Login() {
 				if (ok) {document.location.href = '/';
 				}
 			});
-		}else{	
+			
+		} else if (response.status===401){	
 			swal({
 				title: "Login incorrecto!!!",
 				text: "Pulse OK para reintentar o registrese....",
 				icon: "warning",
 			})
-		}
-		console.log(responseData.message);
-		console.log(responseData.token);
-		console.log("Usuario logueado" );
+			.then(ok => {
+				if (ok) {document.location.href = '/login';
+				}
+			});
+		} else {
+			swal({
+				title: "ERROR !!!",
+				text: "Ha ocurrido un fallo general, intentelo mas tarde.",
+				icon: "warning",
+			})
+		}	
 		
+		console.log("Usuario logueado" );
 	}
    
     return (

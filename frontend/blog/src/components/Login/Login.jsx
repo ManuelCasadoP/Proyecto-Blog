@@ -73,7 +73,7 @@ export default function Login() {
 				}
 			});
 			
-		} else if (response.status===401){	
+		} else if (response.status === 400 || 401){	
 			console.log("Login de usuario incorrecto")
 			swal({
 				title: "Login incorrecto!!!",
@@ -86,7 +86,7 @@ export default function Login() {
 				}
 			});
 		} else {
-			console.log("Error gravísiiimo de sabe D10S qué...!!!")
+			console.log("Error gravísiiimo de sabe D10S que...!!!")
 			swal({
 				title: "ERROR !!!",
 				text: "Ha ocurrido un fallo general, intentelo mas tarde.",

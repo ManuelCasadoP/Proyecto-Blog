@@ -1,4 +1,5 @@
 import "./login.css";
+import swal from 'sweetalert';
 import {Link} from "react-router-dom";
 import{ useState } from 'react';
 
@@ -52,13 +53,46 @@ export default function Login() {
 				body: data
 			}
 		);
-		const responseData = await response.json();
-		sessionStorage.setItem("token", responseData.token);
-		document.location.href = '/';
-		console.log(responseData.message);
-		console.log(responseData.token);
-		console.log("Usuario logueado" );
 		
+		console.log(response.status);
+		//const responseData = await response.json();
+
+		if(response.status===200){
+			const responseData = await response.json();
+			sessionStorage.setItem("token", responseData.token);
+			console.log(responseData.message);
+			console.log(responseData.token);
+			console.log("Login de usuario correcto" )
+			swal({
+				title: "Login correcto!!!",
+				text: "Pulse OK para continuar....",
+				icon: "success",
+			})
+			.then(ok => {
+				if (ok) {document.location.href = '/';
+				}
+			});
+			
+		} else if (response.status === 400 || 401){	
+			console.log("Login de usuario incorrecto")
+			swal({
+				title: "Login incorrecto!!!",
+				text: "Pulse Aceptar para reintentar o crear una cuenta....",
+				icon: "warning",
+				button: "Aceptar"
+			})
+			.then(ok => {
+				if (ok) {document.location.href = '/login';
+				}
+			});
+		} else {
+			console.log("Error gravísiiimo de sabe D10S que...!!!")
+			swal({
+				title: "ERROR !!!",
+				text: "Ha ocurrido un fallo general, intentelo mas tarde.",
+				icon: "warning",
+			})
+		}	
 	}
    
     return (

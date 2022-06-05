@@ -103,7 +103,7 @@ export default function Login() {
 
                             {error ? <p>Todos los campos son obligatorios</p> : null}
 
-								<label className="loginLabel" htmlFor="email"> Correo electronico </label>
+								<label className="loginLabel" htmlFor="email"> Correo electrónico </label>
 								<input className="loginInput" type="text" name="email" value={email} onChange={getInfo}/>
 										
 								<label className="loginLabel" htmlFor="password"> Contraseña </label>

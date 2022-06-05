@@ -1,5 +1,5 @@
 import "./register.css";
-//import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import{ useState } from 'react';
 
 export default function Register() {
@@ -83,7 +83,7 @@ export default function Register() {
 
                             {error ? <p>Todos los campos son obligatorios</p> : null}
 
-								<label className="registerLabel" htmlFor="email"> Correo electronico </label>
+								<label className="registerLabel" htmlFor="email"> Correo electrónico </label>
 								<input className="registerInput" type="text" name="email" value={email} onChange={getInfo}/>
 								
                                 <label className="registerLabel" htmlFor="name"> Nombre </label>
@@ -93,6 +93,11 @@ export default function Register() {
 								<input className="registerInput" type="password" name="password" value={password} onChange={getInfo}/>
 										
 								<button className="registerButton" type="submit">Entrar</button>
+								<br /><br />
+
+								<Link to={`/login`}>
+                                     <p>Si ya tienes cuenta, inicia sesión</p>
+                                </Link>
 
 							</form>	
 						</div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Nav from '../../components/Nav/Nav';
 import Header from "../../components/Header/Header";
 import MainNews from "../../components/MainNews/MainNews"
 import SecondaryNews from "../../components/SecondaryNews/SecondaryNews"
@@ -45,6 +46,9 @@ function MainView () {
     return (
         <>  
             <div className="mainViewContainer">
+                <div className='navView'>
+                    <Nav/>
+                </div>
                 <div className="headerView">
                     <Header/>
                 </div>                

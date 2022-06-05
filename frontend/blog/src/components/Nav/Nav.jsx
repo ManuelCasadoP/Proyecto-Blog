@@ -3,7 +3,7 @@ import image from "./Palmeras.jpg"
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function Nav ({setUserLogin}){
+export default function Nav (){
 
     const [userLogin, setUserLogin] = useState(false);
 

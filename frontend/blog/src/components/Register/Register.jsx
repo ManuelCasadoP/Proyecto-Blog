@@ -1,6 +1,7 @@
 import "./register.css";
 import {Link} from "react-router-dom";
 import{ useState } from 'react';
+import swal from 'sweetalert';
 
 export default function Register() {
 
@@ -44,35 +45,60 @@ export default function Register() {
 	 *  JSON POST
 	 */
 	async function post(url, data) {
-		const response = await fetch(
-			url,
-			{
-				method: 'POST',
-				headers: {
-					"Content-Type": "application/json"
-				},
-				body: data
+		try{
+			const response = await fetch(
+				url,
+				{
+					method: 'POST',
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: data
+				}
+			);
+	
+			console.log(response.status);
+			
+			if(response.status===201){		
+				console.log("Usuario registrado correctamente" )
+				swal({
+					title: "Usuario registrado correctamente !!!",
+					text: "Pulse OK para continuar e inicie sesion en la siguiente pagina",
+					icon: "success",
+				})
+				.then(ok => {
+					if (ok) {document.location.href = '/login';
+					}
+				});
+				
+			} else if (response.status === 401){	
+				console.log("Error al registrar usuario")
+				swal({
+					title: "Error al registrar usuario !!!",
+					text: "Este usuario ya existe pulsa aceptar para reintentar...",
+					icon: "error",
+					button: "Aceptar"
+				})
+				.then(ok => {
+					if (ok) {document.location.href = '/register';
+					}
+				});
+			} else {
+				console.log("Error gravísiiimo de sabe D10S que...!!!")
+				swal({
+					title: "ERROR !!!",
+					text: "Ha ocurrido un fallo general, intentelo mas tarde.",
+					icon: "error"
+				})
 			}
-		);
-
-		console.log(response.status);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		//const responseData = await response.json();
-		//console.log(responseData);
-		
+		} catch (err){
+			console.log("Error gravísiiimo de sabe D10S que...!!!")
+				swal({
+					title: "ERROR !!!",
+					text: "Ha ocurrido un fallo general, intentelo mas tarde.",
+					icon: "error"
+				})
+		}	
 	}
    
     return (
@@ -96,7 +122,11 @@ export default function Register() {
 								<br /><br />
 
 								<Link to={`/login`}>
+<<<<<<< HEAD
                                      <p>Si ya tienes cuenta, inicia sesión</p>
+=======
+                                     <p>Si ya tienes cuenta, inicia sesion!</p>
+>>>>>>> b49559bb1887d46f5356a3e888e618eb1c72fc35
                                 </Link>
 
 							</form>	

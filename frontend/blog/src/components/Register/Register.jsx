@@ -122,11 +122,7 @@ export default function Register() {
 								<br /><br />
 
 								<Link to={`/login`}>
-<<<<<<< HEAD
                                      <p>Si ya tienes cuenta, inicia sesión</p>
-=======
-                                     <p>Si ya tienes cuenta, inicia sesion!</p>
->>>>>>> b49559bb1887d46f5356a3e888e618eb1c72fc35
                                 </Link>
 
 							</form>	

@@ -3,7 +3,7 @@ import swal from 'sweetalert';
 import {Link} from "react-router-dom";
 import{ useState } from 'react';
 
-export default function Login() {
+export default function Login({setUserLogin}) {
 
     const host = "http://localhost:4000/api/v0.0/users/login";
 
@@ -71,6 +71,7 @@ export default function Login() {
 				})
 				.then(ok => {
 					if (ok) {document.location.href = '/';
+							setUserLogin(true);		
 					}
 				});
 				

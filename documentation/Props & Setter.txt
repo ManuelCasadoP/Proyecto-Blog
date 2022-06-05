@@ -1,0 +1,70 @@
+import History from './componentes/History/History.jsx';
+
+const [ history, setHistory] = useState([]);
+
+<History historyArray={history}/>
+
+-----------------------------------------------------
+
+function History(props) {
+
+    const historyBuffer = props.historyArray.map(
+        (item) => <p>{item}</p>
+    );
+
+    return (
+        <>     
+        <h1>Historial</h1>
+        {historyBuffer}
+        </>
+    );
+}
+
+
+=================================================================================================
+
+import { useState } from 'react';
+
+import TextoCualquiera from './components/TextoCualquiera';
+import PasaPalabro from './components/PasaPalabro';
+
+function App() {
+
+  const [ palabro, setPalabro ] = useState("aceituna")
+
+  return (
+    <>
+      <PasaPalabro parentSetter={setPalabro}/>
+      <p>Palabro: {palabro}</p>
+      <TextoCualquiera dynamicString="Lo que sea"/>
+      <TextoCualquiera dynamicString="Otra cosa"/>
+    </>
+
+
+  );
+}
+
+export default App;
+
+-----------------------------------------------------------------------------
+
+import { useState } from "react"
+
+function PasaPalabro(props) {
+
+    const [ nuevoPalabro, setNuevoPalabro ] = useState("");
+
+    function inputChangeHandler (event) {
+        setNuevoPalabro(event.target.value)
+        props.parentSetter(event.target.value)
+    }
+
+    return (
+        <>
+            <input type="text" onChange={inputChangeHandler} value={nuevoPalabro}/>
+            <p>Nuevo palabro: {nuevoPalabro}</p>
+        </>
+    )
+}
+
+export default PasaPalabro

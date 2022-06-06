@@ -62,6 +62,7 @@ export default function WriteNews () {
 		);
 		const responseData = await response.text();
 		console.log(responseData);
+		document.location.href = '/write';
 		console.log("Noticia enviada correctamente" );
 	}
 

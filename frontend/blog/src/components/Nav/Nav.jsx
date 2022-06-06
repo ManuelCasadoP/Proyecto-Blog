@@ -18,7 +18,7 @@ export default function Nav (){
         <div className="top">
             <div className="topLeft">
                 <ul className="topList">
-                    <li className="topListItem blogHeadTitle">THE COUNTRY</li>
+                    <li className="topListItem blogHeadTitle">ELPAíS</li>
                 </ul>
             </div>
 

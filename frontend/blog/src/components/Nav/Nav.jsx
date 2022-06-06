@@ -1,13 +1,13 @@
 import "./nav.css";
 import image from "./Palmeras.jpg"
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
-export default function Nav (){
+export default function Nav ({userLogin, setUserLogin}){
 
-    const [userLogin, setUserLogin] = useState(false);
+    
 
     function logoutHandler() {
+        sessionStorage.removeItem("token");
         setUserLogin(false);
     }
 
@@ -28,9 +28,9 @@ export default function Nav (){
                         (
                             <ul className="topList">
                                 <li className="topListItem headNews">NOTICIAS:</li>
-                                <li className="topListItem"><Link className="link" to="/">REDACTAR</Link></li>
+                                <li className="topListItem"><Link className="link" to="/write">REDACTAR</Link></li>
                                 <li className="topListItem"><Link className="link" to="/">ACTUALIZAR</Link></li>
-                                <li className="topListItem"><Link className="link" to="/write">ELIMINAR</Link></li>
+                                <li className="topListItem"><Link className="link" to="/">ELIMINAR</Link></li>
                             </ul>
                         ):(null)}
             </div>

@@ -12,6 +12,7 @@ function MainView () {
 
     const [NoticiaPrincipal, SetNoticiaPrincipal] = useState([])
     const [NoticiaSecundaria, SetNoticiaSecundaria] = useState([])
+    const [userLogin, setUserLogin] = useState(true);
 
     useEffect(() => {   
 
@@ -47,7 +48,7 @@ function MainView () {
         <>  
             <div className="mainViewContainer">
                 <div className='navView'>
-                    <Nav/>
+                    <Nav userLogin={userLogin} setUserLogin={setUserLogin}/>
                 </div>
                 <div className="headerView">
                     <Header/>

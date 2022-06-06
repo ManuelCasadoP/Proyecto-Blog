@@ -6,11 +6,11 @@ function OtherNews ({ id_news, title, date, author, summary, src }) {
     return (
         <>
             <div className="otherNewsContainer">
-                <div className="otherNewsImgContainer">
+                
                     <Link to={`/news/${id_news}`}> 
                         <img className="otherNewsImg" src={src} alt="" />
                     </Link>
-                </div>
+               
                 
                 <div className="otherNewsText">
                 <Link to={`/news/${id_news}`}>

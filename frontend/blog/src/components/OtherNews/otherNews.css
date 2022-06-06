@@ -1,0 +1,100 @@
+.otherNewsContainer {
+    border-top: 1px solid rgb(234, 234, 234);
+    display: flex;
+    flex-direction: row;
+    width: 66%;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+
+}
+/*
+.otherNewsList {
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+}
+*/
+.otherNewsImg {
+    display: flex;
+    margin-top: 10px;
+    width: 50%;
+    height: auto; /* Buscando solución al ratio aspecto */
+    cursor: pointer;
+}
+
+.otherNewsText {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.otherNewsTitle {
+    color: rgb(15, 15, 15);
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Lora', serif;
+    
+    margin: 3px;
+    cursor: pointer;
+}
+
+.otherNewsAuthorAndDate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.otherNewsDate {
+    margin: 3px;
+    font-size: 0.8em;
+}
+
+.otherNewsAuthor {
+    cursor: pointer;
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.otherNewsSummary {
+    font-size: 0.938em;
+    line-height: 1.4em;
+    font-weight: 400;
+    color: #777;
+    font-family: 'Lora', serif;
+}
+/*
+@media only screen and (min-width: 580px) {
+    .otherNewsContainer {
+        max-width: 46vw;
+        
+    }
+ }
+
+ @media only screen and (min-width: 1000px) {
+    .otherNewsContainer {
+        max-width: 43vw;
+        
+    }
+ }
+
+ @media only screen and (min-width: 1100px) {
+    .otherNewsContainer {
+        max-width: 38vw;
+        
+    }
+ }
+
+ @media only screen and (min-width: 1200px) {
+    .otherNewsContainer {
+        max-width: 33vw;
+        
+    }
+ }
+ */

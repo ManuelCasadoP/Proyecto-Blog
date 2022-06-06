@@ -18,15 +18,12 @@ export default function WriteNews () {
 	});
 
 	const { title, date, author, summary, content, src } = news; 
-
+/*
 	const tiempoTranscurrido = Date.now();
 	const hoy = new Date(tiempoTranscurrido);
 	const fechaActual = hoy.toLocaleDateString();
-
+*/
 	const getInfo = (event)=>{
-		/*const borrame = {
-			[event.target.name]:event.target.value
-		}*/
 		setNews({
 			...news,
 			[event.target.name]:event.target.value
@@ -50,9 +47,7 @@ export default function WriteNews () {
 			post(host, data);
 			setError(false);
 		}
-		
 	}
-
 
 	/**
 	 *  JSON POST
@@ -87,7 +82,7 @@ export default function WriteNews () {
 								<input className="writeNewsInput" type="text" name="title" value={title} onChange={getInfo}/>
 										
 								<label className="writeNewsLabel" htmlFor="date"> Fecha </label>
-								<input className="writeNewsInput" type="text" name="date" value={fechaActual} onChange={getInfo}/>
+								<input className="writeNewsInput" type="text" name="date" value={date} onChange={getInfo}/>
 										
 								<label className="writeNewsLabel" htmlFor="author"> Autor </label>
 								<input className="writeNewsInput" type="text" name="author" value={author} onChange={getInfo}/>

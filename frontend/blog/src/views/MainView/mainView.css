@@ -22,18 +22,10 @@
 
 .otherNewsView {
     display: flex;
-    height: 50vh;
+    flex-direction: row;
 }
 
-.otherNewsList {
-    display: flex;
-    flex: 8;
-}
 
-.moreShowNewsList{
-    display: flex;
-    flex: 4;
-}
 
 @media only screen and (min-width: 580px) {
     .secondaryNewsView {

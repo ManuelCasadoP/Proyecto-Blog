@@ -4,15 +4,10 @@ import { Link } from "react-router-dom";
 
 export default function Nav ({userLogin, setUserLogin}){
 
-    
-
     function logoutHandler() {
         sessionStorage.removeItem("token");
         setUserLogin(false);
     }
-
-
-
 
     return(
         <div className="top">

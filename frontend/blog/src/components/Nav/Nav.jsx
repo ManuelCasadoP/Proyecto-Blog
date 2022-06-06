@@ -18,21 +18,11 @@ export default function Nav ({userLogin, setUserLogin}){
         <div className="top">
             <div className="topLeft">
                 <ul className="topList">
-                    <li className="topListItem blogHeadTitle">ELPAíS</li>
+                    <li className="topListItem blogHeadTitle">EL PAíS</li>
                 </ul>
             </div>
-
-            {/*Menú condicionado al LOGIN*/}
             <div className="topCenter">
-                { userLogin === true ?
-                        (
-                            <ul className="topList">
-                                <li className="topListItem headNews">NOTICIAS:</li>
-                                <li className="topListItem"><Link className="link" to="/write">REDACTAR</Link></li>
-                                <li className="topListItem"><Link className="link" to="/">ACTUALIZAR</Link></li>
-                                <li className="topListItem"><Link className="link" to="/">ELIMINAR</Link></li>
-                            </ul>
-                        ):(null)}
+
             </div>
 
             {/*Menú condicionado al LOGIN*/}
@@ -41,7 +31,9 @@ export default function Nav ({userLogin, setUserLogin}){
                     (
                         <ul className="topList">
                             <li className="topListItem">
-                                <img className="topImg" src={image} alt="" />
+                                <Link className="link" to="/write">
+                                    <img className="topImg" src={image} alt="Redactar noticia" title="Redactar noticia" />
+                                </Link>
                             </li>
                             <li className="topListItem">
                                 <Link className="link" to="/" onClick={logoutHandler}>SALIR</Link>

@@ -56,7 +56,6 @@ export default function Login() {
 			);
 			
 			console.log(response.status);
-			//const responseData = await response.json();
 	
 			if(response.status===200){
 				const responseData = await response.json();
@@ -70,8 +69,7 @@ export default function Login() {
 					icon: "success",
 				})
 				.then(ok => {
-					if (ok) {document.location.href = '/';
-							//setUserLogin(true);		
+					if (ok) {document.location.href = '/';		
 					}
 				});
 				

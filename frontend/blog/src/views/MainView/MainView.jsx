@@ -10,9 +10,11 @@ const BACKENDURL="http://localhost:4000/";
 
 function MainView () {
 
+    const currentSession = sessionStorage.getItem('token') ? true : false
+
     const [NoticiaPrincipal, SetNoticiaPrincipal] = useState([])
     const [NoticiaSecundaria, SetNoticiaSecundaria] = useState([])
-    const [userLogin, setUserLogin] = useState(true);
+    const [userLogin, setUserLogin] = useState(currentSession);
 
     useEffect(() => {   
 

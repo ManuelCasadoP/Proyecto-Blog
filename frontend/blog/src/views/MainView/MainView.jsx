@@ -3,6 +3,7 @@ import Nav from '../../components/Nav/Nav';
 import Header from "../../components/Header/Header";
 import MainNews from "../../components/MainNews/MainNews"
 import SecondaryNews from "../../components/SecondaryNews/SecondaryNews"
+import OtherNews from '../../components/OtherNews/OtherNews';
 import "./mainView.css"
 
 const BACKENDURL="http://localhost:4000/";
@@ -14,6 +15,7 @@ function MainView () {
 
     const [NoticiaPrincipal, SetNoticiaPrincipal] = useState([])
     const [NoticiaSecundaria, SetNoticiaSecundaria] = useState([])
+    const [NoticiasRestantes, SetNoticiasRestantes] = useState([])
     const [userLogin, setUserLogin] = useState(currentSession);
 
     useEffect(() => {   
@@ -34,6 +36,7 @@ function MainView () {
                         //SetNoticiaSecundaria(getNoticias.splice(1,4))
                         SetNoticiaPrincipal(readData.splice(0,1))
                         SetNoticiaSecundaria(readData.splice(0,4))
+                        SetNoticiasRestantes(readData.splice(0,10))
             }))
       }, []);
 
@@ -43,6 +46,10 @@ function MainView () {
     
     const secondaryNews = NoticiaSecundaria.map(
         (item,idx) => <SecondaryNews key={idx} id_news={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} src={item.src}/>  
+    )
+
+    const otherNews = NoticiasRestantes.map(
+        (item,idx) => <OtherNews key={idx} id_news={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} src={item.src}/>
     )
 
    
@@ -61,6 +68,13 @@ function MainView () {
                 <div className="secondaryNewsView">    
                     {secondaryNews}
                 </div>
+                <div className='otherNewsView'>
+                    <div className='otherNewsList'>
+                        {otherNews}
+                    </div>
+                    <div className='moreShowNewsList'>Las Noticias más vistas</div>
+                </div>
+
             </div>
         </>
     )

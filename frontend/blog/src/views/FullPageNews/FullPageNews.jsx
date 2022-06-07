@@ -45,8 +45,17 @@ function FullPageNews(){
             <h1 className="fullPageNewsTitle">{NoticiaCompleta.title}</h1>
             <p className="fullPageNewsSummary">{NoticiaCompleta.summary}</p> 
             <img className="fullPageNewsImg" src={NoticiaCompleta.src} alt=""/>
-            <p className="fullPageNewsAuthor">{NoticiaCompleta.author}</p>
-            <p className="fullPageNewsDate">{NoticiaCompleta.date}</p>  
+
+            <div className='fullPageNewsAuthor_Date_Icon'>
+                <div className='fullPageNewsAuthor_and_Date'>
+                    <p className="fullPageNewsAuthor">{NoticiaCompleta.author}</p>
+                    <p className="fullPageNewsDate">{NoticiaCompleta.date}</p> 
+                </div>
+                <div>
+                    <i className=" fullPageNewsIcon fa-solid fa-trash-can"></i>
+                </div>               
+            </div>
+
             <p className="fullPageNewsContent">{NoticiaCompleta.content}</p> 
         
         </div>

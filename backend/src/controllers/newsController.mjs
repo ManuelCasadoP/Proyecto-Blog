@@ -113,7 +113,9 @@ export function putNewsController(request, response){
  */
 export function deleteNewsController (request,response) {
 
-    const { id_news } = request.body;
+    //const { id_news } = request.body;
+
+    const { id_news } = request.params;
 
     db.get(
         `SELECT id_news FROM news WHERE id_news=${id_news}`, 

@@ -23,7 +23,7 @@ try {
 
     app.put(PATH_PREFIX+"/news/id_news", putNewsController);
 
-    app.delete(PATH_PREFIX+"/news/id_news", deleteNewsController);
+    app.delete(PATH_PREFIX+"/news/:id_news", deleteNewsController);
 
 
     // EndPoints para /users/

@@ -10,6 +10,7 @@ const BACKENDURL="http://localhost:4000/";
 function FullPageNews(){
 
     const currentSession = sessionStorage.getItem('token') ? true : false
+
     const [ NoticiaCompleta, SetNoticiaCompleta ]= useState({})
     const [userLogin, setUserLogin] = useState(currentSession);
 
@@ -35,15 +36,57 @@ function FullPageNews(){
     }
 
     async function deleteNews(url){
-        const response = await fetch(
-            url,
-            {
-                method: 'DELETE',
+        try{
+            const response = await fetch(
+                url,
+                {
+                    method: 'DELETE',
+                    
+                }
+            );
+            console.log(response.status);
+        ///////////////////////////////////////////////////////////////////////////        
+            if(response.status===201){
+                console.log("Noticia eliminada correctamente" )
+                swal({
+                    title: "Noticia elimanda correctamente!!!",
+                    text: "Pulse OK para continuar....",
+                    icon: "success",
+                })
+                .then(ok => {
+                    if (ok) {document.location.href = '/';		
+                    }
+                });
                 
-            }
-        );
-        console.log(response.status);
-}
+            } else if (response.status === 401){	
+                console.log("Token incorrecto")
+                swal({
+                    title: "Token incorrecto!!! No puede realizar esta acción.",
+                    text: "Pulse Aceptar para reintentar o inicia sesion....",
+                    icon: "warning",
+                    button: "Aceptar"
+                })
+                .then(ok => {
+                    if (ok) {document.location.href = '/write';
+                    }
+                });
+            } else {
+                console.log("Error gravísiiimo de sabe D10S que...!!!")
+                swal({
+                    title: "ERROR !!!",
+                    text: "Ha ocurrido un fallo general, intentelo mas tarde.",
+                    icon: "error",
+                })
+            }	    
+        }catch (err){
+			console.log("Error gravísiiimo de sabe D10S que...!!!")
+				swal({
+					title: "ERROR !!!",
+					text: "Ha ocurrido un fallo general, intentelo mas tarde.",
+					icon: "error",
+				})
+		}
+    }
 
 
     useEffect(() => {   
@@ -76,7 +119,10 @@ function FullPageNews(){
                     <p className="fullPageNewsDate">{NoticiaCompleta.date}</p> 
                 </div>
                 <div>
-                    <i className=" fullPageNewsIcon fa-solid fa-trash-can" onClick={BorrarNoticia}></i>
+                    {/*Borrado condicional de la Noticia*/}
+                    {userLogin === true ?
+                        <i className=" fullPageNewsIcon fa-solid fa-trash-can" onClick={BorrarNoticia}></i>
+                    : null}        
                 </div>               
             </div>
 

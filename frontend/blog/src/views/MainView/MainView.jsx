@@ -36,7 +36,7 @@ function MainView () {
                         //SetNoticiaSecundaria(getNoticias.splice(1,4))
                         SetNoticiaPrincipal(readData.splice(0,1))
                         SetNoticiaSecundaria(readData.splice(0,4))
-                        SetNoticiasRestantes(readData.splice(0,10))
+                        SetNoticiasRestantes(readData.splice(0,15))
             }))
       }, []);
 

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom"
 
 import Header from "../../components/Header/Header"
+import Nav from "../../components/Nav/Nav"
 import "./fullPageNews.css"
 
 const BACKENDURL="http://localhost:4000/";
@@ -37,7 +38,8 @@ function FullPageNews(){
 
         <>        
             <div className="fullPageNewsContainer">
-            
+
+            <Nav/>
             <Header/>
 
             <h1 className="fullPageNewsTitle">{NoticiaCompleta.title}</h1>

@@ -1,6 +1,7 @@
 import Header from "../Header/Header";
 import "./writeNews.css";
 import{ useState } from 'react';
+import swal from 'sweetalert';
 
 
 export default function WriteNews () {	
@@ -53,17 +54,66 @@ export default function WriteNews () {
 	 *  JSON POST
 	 */
 	async function post(url, data) {
-		const response = await fetch(
-			url,
-			{
-				method: 'POST',
-				body: data
-			}
-		);
-		const responseData = await response.text();
-		console.log(responseData);
-		document.location.href = '/write';
-		console.log("Noticia enviada correctamente" );
+		try{
+			const response = await fetch(
+				url,
+				{
+					method: 'POST',
+					body: data
+				}
+			);
+			//const responseData = await response.text();
+			//console.log(responseData);
+			//document.location.href = '/write';
+			//console.log("Noticia enviada correctamente" );
+
+			console.log(response.status);
+	
+			if(response.status===201){
+				//const responseData = await response.json();
+				//sessionStorage.setItem("token", responseData.token);
+				//console.log(responseData.message);
+				//console.log(responseData.token);
+				console.log("Noticia enviada correctamente" )
+				swal({
+					title: "Noticia enviada correctamente!!!",
+					text: "Pulse OK para continuar....",
+					icon: "success",
+				})
+				.then(ok => {
+					if (ok) {document.location.href = '/write';		
+					}
+				});
+				
+			} else if (response.status === 401){	
+				console.log("Token incorrecto")
+				swal({
+					title: "Token incorrecto!!!",
+					text: "Pulse Aceptar para reintentar o inicia sesion....",
+					icon: "warning",
+					button: "Aceptar"
+				})
+				.then(ok => {
+					if (ok) {document.location.href = '/write';
+					}
+				});
+			} else {
+				console.log("Error gravísiiimo de sabe D10S que...!!!")
+				swal({
+					title: "ERROR !!!",
+					text: "Ha ocurrido un fallo general, intentelo mas tarde.",
+					icon: "error",
+				})
+			}	
+
+		}catch (err){
+			console.log("Error gravísiiimo de sabe D10S que...!!!")
+				swal({
+					title: "ERROR !!!",
+					text: "Ha ocurrido un fallo general, intentelo mas tarde.",
+					icon: "error",
+				})
+		}
 	}
 
 
@@ -83,7 +133,7 @@ export default function WriteNews () {
 								<input className="writeNewsInput" type="text" name="title" value={title} onChange={getInfo}/>
 										
 								<label className="writeNewsLabel" htmlFor="date"> Fecha </label>
-								<input className="writeNewsInput" type="text" name="date" value={date} onChange={getInfo}/>
+								<input className="writeNewsInput" type="date" name="date" value={date} onChange={getInfo}/>
 										
 								<label className="writeNewsLabel" htmlFor="author"> Autor </label>
 								<input className="writeNewsInput" type="text" name="author" value={author} onChange={getInfo}/>

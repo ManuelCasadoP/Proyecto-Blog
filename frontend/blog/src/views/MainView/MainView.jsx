@@ -72,7 +72,9 @@ function MainView () {
                     <div className='otherNewsList'>
                         {otherNews}
                     </div>
-                    <div className='moreShowNewsList'></div>
+                    <div className='moreOtherNewsList'>
+                        <p>Otras Noticias</p>
+                    </div>
                 </div>
 
             </div>

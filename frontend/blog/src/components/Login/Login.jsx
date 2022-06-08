@@ -106,26 +106,33 @@ export default function Login() {
     return (
         <>
             <div className="loginFormContainer">
-						<div className="loginForm">
-							<form onSubmit={getLogin}>
+				<div className="loginForm">
+					<h1>Iniciar Sesión</h1>
+					<form onSubmit={getLogin}>
 
-                            {error ? <p>Todos los campos son obligatorios</p> : null}
+                        {error ? <p>Todos los campos son obligatorios</p> : null}
 
-								<label className="loginLabel" htmlFor="email"> Correo electrónico </label>
-								<input className="loginInput" type="text" name="email" value={email} onChange={getInfo}/>
-										
-								<label className="loginLabel" htmlFor="password"> Contraseña </label>
-								<input className="loginInput" type="password" name="password" value={password} onChange={getInfo}/>
-										
-								<button className="loginButton" type="submit">Entrar</button>
-                                <br /><br />
-
-                                <Link to={`/register`}>
-                                     <p>Si no tienes todavia, crea tu cuenta</p>
-                                </Link>
-
-							</form>	
+						<div className="fieldForm">
+							<label className="loginLabel" htmlFor="email"> Correo electrónico </label>
+							<input className="loginInput" type="text" name="email" value={email} onChange={getInfo}/>
 						</div>
+						<div className="fieldForm">
+							<label className="loginLabel" htmlFor="password"> Contraseña </label>
+							<input className="loginInput" type="password" name="password" value={password} onChange={getInfo}/>
+						</div>
+						<div className="fieldForm">
+							<input type="submit" class="loginButton" value="Entrar" />
+						</div>				
+										
+                        <br /><br />
+
+						<div className="linkToRegister">
+							<Link to={`/register`}>
+								<p className="linkToRegister">Si no tienes todavia, crea tu cuenta</p>
+							</Link>
+						</div>
+					</form>	
+				</div>
 			</div>
         </>
     )

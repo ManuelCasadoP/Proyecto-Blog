@@ -104,29 +104,40 @@ export default function Register() {
     return (
         <>
             <div className="registerFormContainer">
-						<div className="registerForm">
-							<form onSubmit={getRegister}>
+				<div className="registerForm">
+					<h1>Crear Cuenta</h1>
+					<form onSubmit={getRegister}>
 
-                            {error ? <p>Todos los campos son obligatorios</p> : null}
+                        {error ? <p>Todos los campos son obligatorios</p> : null}
 
-								<label className="registerLabel" htmlFor="email"> Correo electrónico </label>
-								<input className="registerInput" type="text" name="email" value={email} onChange={getInfo}/>
-								
-                                <label className="registerLabel" htmlFor="name"> Nombre </label>
-								<input className="registerInput" type="text" name="name" value={name} onChange={getInfo}/>
-										
-								<label className="registerLabel" htmlFor="password"> Contraseña </label>
-								<input className="registerInput" type="password" name="password" value={password} onChange={getInfo}/>
-										
-								<button className="registerButton" type="submit">Entrar</button>
-								<br /><br />
-
-								<Link to={`/login`}>
-                                     <p>Si ya tienes cuenta, inicia sesión</p>
-                                </Link>
-
-							</form>	
+						<div className="fieldForm">
+							<label className="registerLabel" htmlFor="email"> Correo electrónico </label>
+							<input className="registerInput" type="text" name="email" value={email} onChange={getInfo}/>
 						</div>
+						<div className="fieldForm">
+							<label className="registerLabel" htmlFor="name"> Nombre </label>
+							<input className="registerInput" type="text" name="name" value={name} onChange={getInfo}/>
+						</div>
+						<div className="fieldForm">
+							<label className="registerLabel" htmlFor="password"> Contraseña </label>
+							<input className="registerInput" type="password" name="password" value={password} onChange={getInfo}/>
+						</div>									
+							
+						<div>
+							{/*<button className="registerButton" type="submit">Continuar</button>*/}
+							<input className="registerButton" type="submit" value="Continuar" />	
+						</div>		
+								
+						<br /><br />
+						<div className="linkToLogin">
+							<Link to={`/login`}>
+								<p className="linkToLogin">Si ya tienes cuenta, inicia sesión</p>
+							</Link>
+						</div>
+						
+
+					</form>	
+				</div>
 			</div>
         </>
     )

@@ -23,9 +23,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-weight: 400;
-    color: #000;
-    letter-spacing: -1px;
+    font-weight: 200;
+    letter-spacing: -2px;
     font-style: normal;
     padding-top: 10px;
 }
@@ -33,6 +32,9 @@
 .fullPageNewsAuthor_and_Date {
     display: flex;
     flex-direction: row;
+    color: #777;
+    font-family: 'Lora', serif;
+    font-size: small;
     padding: 0px;
     margin: 0px;
 }
@@ -47,7 +49,30 @@
 }
 
 .fullPageNewsTitle {
+    color: rgb(15, 15, 15);
+    font-family: 'Lora', serif;
+    font-size: 2.5em;
+    line-height: 106%;
+    font-weight: 800;
+    margin: 0px;
+    font-style: normal;
     cursor:default;
+}
+
+.fullPageNewsSummary {
+    font-size: 0.938em;
+    line-height: 1.6em;
+    font-weight: 400;
+    color: #777;
+    font-family: 'Lora', serif;
+}
+
+.fullPageNewsContent {
+    font-size: 0.938em;
+    line-height: 1.6em;
+    font-weight: 400;
+    color: #777;
+    font-family: 'Lora', serif;
 }
 
  @media only screen and (min-width: 580px) {

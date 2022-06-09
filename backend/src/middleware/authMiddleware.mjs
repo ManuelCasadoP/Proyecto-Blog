@@ -14,9 +14,12 @@ export default function authMiddleware (request, response, next) {
         if ( validAuth ) {
             //const { username } = jwt.decode(token)
             //res.locals["username"] = username // Paso el username para uso en los controllers
+
             next()
+
             const validacion = JSON.stringify(validAuth);
             console.log(`validAuth: ${validacion}`)
+            
         } else {
             console.log("Token no válido")}
             response.sendStatus(401).send("Token no válido")

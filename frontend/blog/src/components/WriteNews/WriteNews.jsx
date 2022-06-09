@@ -101,10 +101,7 @@ export default function WriteNews () {
 					icon: "warning",
 					button: "Aceptar"
 				})
-				.then(ok => {
-					if (ok) {document.location.href = '/write';
-					}
-				});
+				
 			} else {
 				console.log("Error gravísiiimo de sabe D10S que...!!!")
 				swal({

@@ -50,15 +50,23 @@ export default function WriteNews () {
 		}
 	}
 
+
 	/**
 	 *  JSON POST
 	 */
 	async function post(url, data) {
 		try{
-			const response = await fetch(
+			const token = sessionStorage.getItem("token");
+			console.log(token);
+
+			if(token){
+				const response = await fetch(
 				url,
 				{
 					method: 'POST',
+					headers: {
+						Authorization: "Bearer "+ token
+					},
 					body: data
 				}
 			);
@@ -104,9 +112,23 @@ export default function WriteNews () {
 					text: "Ha ocurrido un fallo general, intentelo mas tarde.",
 					icon: "error",
 				})
-			}	
-
-		}catch (err){
+			}
+		} else {
+			
+			console.log("Token incorrecto")
+				swal({
+					title: "Token incorrecto!!!",
+					text: "Pulse Aceptar para reintentar o inicia sesion....",
+					icon: "warning",
+					button: "Aceptar"
+				})
+				.then(ok => {
+					if (ok) {document.location.href = '/write';
+					}
+				});
+		}
+				
+		} catch (err){
 			console.log("Error gravísiiimo de sabe D10S que...!!!")
 				swal({
 					title: "ERROR !!!",

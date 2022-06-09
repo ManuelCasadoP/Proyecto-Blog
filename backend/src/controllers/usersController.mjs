@@ -2,7 +2,6 @@ import { db } from "../models/db.mjs";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import  'dotenv/config';
-import  express  from  'express';
 
 /**
  *  Controlador para registrar un usuario.

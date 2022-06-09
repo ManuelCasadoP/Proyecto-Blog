@@ -1,8 +1,11 @@
 import express from "express";
 import { getOneNewsController, getAllNewsController, postNewsController, putNewsController, deleteNewsController } from "./controllers/newsController.mjs";
 import { userRegisterController, userLoginController, getAllUsersController, deleteUserController } from "./controllers/usersController.mjs";
+import authMiddleware from "./middleware/authMiddleware.mjs"
 //import { validateUserRegister } from "./middleware/userValidatorSchema.mjs";
 import multer from "multer";
+
+
 const PATH_PREFIX = "/api/v0.0"
 const PORT = 4000;
 const app = express();
@@ -19,7 +22,7 @@ try {
 
     app.get(PATH_PREFIX+"/news/", getAllNewsController)
 
-    app.post(PATH_PREFIX+"/news/", uploader.single('src') ,postNewsController);
+    app.post(PATH_PREFIX+"/news/", authMiddleware, uploader.single('src') ,postNewsController);
 
     app.put(PATH_PREFIX+"/news/id_news", putNewsController);
 

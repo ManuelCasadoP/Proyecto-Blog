@@ -62,68 +62,66 @@ export default function WriteNews () {
 			if(token){
 				const response = await fetch(
 				url,
-				{
-					method: 'POST',
-					headers: {
-						Authorization: "Bearer "+ token
-					},
-					body: data
-				}
-			);
-			//const responseData = await response.text();
-			//console.log(responseData);
-			//document.location.href = '/write';
-			//console.log("Noticia enviada correctamente" );
+					{
+						method: 'POST',
+						headers: {
+							Authorization: "Bearer "+ token
+						},
+						body: data
+					}
+				);
 
-			console.log(response.status);
-	
-			if(response.status===201){
-				//const responseData = await response.json();
-				//sessionStorage.setItem("token", responseData.token);
-				//console.log(responseData.message);
-				//console.log(responseData.token);
-				console.log("Noticia enviada correctamente" )
-				swal({
-					title: "Noticia enviada correctamente!!!",
-					text: "Pulse OK para continuar....",
-					icon: "success",
-				})
-				.then(ok => {
-					if (ok) {document.location.href = '/write';		
-					}
-				});
-				
-			} else if (response.status === 401){	
-				console.log("Token incorrecto")
-				swal({
-					title: "Token incorrecto!!!",
-					text: "Pulse Aceptar para reintentar o inicia sesion....",
-					icon: "warning",
-					button: "Aceptar"
-				})
-				
+				//const responseData = await response.text();
+				//console.log(responseData);
+				//document.location.href = '/write';
+				//console.log("Noticia enviada correctamente" );
+
+				console.log(response.status);
+		
+				if(response.status===201){
+					//const responseData = await response.json();
+					//sessionStorage.setItem("token", responseData.token);
+					//console.log(responseData.message);
+					//console.log(responseData.token);
+					console.log("Noticia enviada correctamente" )
+					swal({
+						title: "Noticia enviada correctamente!!!",
+						text: "Pulse OK para continuar....",
+						icon: "success",
+					})
+					.then(ok => {
+						if (ok) {document.location.href = '/write';		
+						}
+					});
+					
+				} else if (response.status === 401){	
+					console.log("Token incorrecto")
+					swal({
+						title: "Token incorrecto!!!",
+						text: "Pulse Aceptar para reintentar o inicia sesion....",
+						icon: "warning",
+						button: "Aceptar"
+					});
+					
+				} else {
+					console.log("Error gravísiiimo de sabe D10S que...!!!")
+					swal({
+						title: "ERROR !!!",
+						text: "Ha ocurrido un fallo general, intentelo mas tarde.",
+						icon: "error",
+					})
+				}
+
 			} else {
-				console.log("Error gravísiiimo de sabe D10S que...!!!")
-				swal({
-					title: "ERROR !!!",
-					text: "Ha ocurrido un fallo general, intentelo mas tarde.",
-					icon: "error",
-				})
-			}
-		} else {
 			
-			console.log("Token incorrecto")
-				swal({
-					title: "Token incorrecto!!!",
-					text: "Pulse Aceptar para reintentar o inicia sesion....",
-					icon: "warning",
-					button: "Aceptar"
-				})
-				.then(ok => {
-					if (ok) {document.location.href = '/write';
-					}
-				});
-		}
+					console.log("Token incorrecto")
+					swal({
+						title: "Token incorrecto!!!",
+						text: "Pulse Aceptar para reintentar o inicia sesion....",
+						icon: "warning",
+						button: "Aceptar"
+						})
+			}
 				
 		} catch (err){
 			console.log("Error gravísiiimo de sabe D10S que...!!!")
@@ -134,7 +132,6 @@ export default function WriteNews () {
 				})
 		}
 	}
-
 
 	return (
 

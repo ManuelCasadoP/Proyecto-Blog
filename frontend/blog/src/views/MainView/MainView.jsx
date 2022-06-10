@@ -79,7 +79,7 @@ function MainView () {
                         {otherNews}
                     </div>
                     <div className='moreOtherNewsList'>
-                        <p className='moreOtherNewsListP'>Otras noticias</p>
+                        <p className='moreOtherNewsListP'>OTRAS NOTÍCIAS</p>
                         {moreOtherNews}
                     </div>
                 </div>

@@ -1,9 +1,12 @@
-.otherNewsList {
+.moreOtherNewsList {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 30%;
 }
 
+.moreOtherNewsListP{
+    font-size: 1,5em;
+}
 
 
 

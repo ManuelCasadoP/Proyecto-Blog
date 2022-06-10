@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import MainNews from "../../components/MainNews/MainNews"
 import SecondaryNews from "../../components/SecondaryNews/SecondaryNews"
 import OtherNews from '../../components/OtherNews/OtherNews';
+import MoreOtherNews from '../../components/MoreOtherNews/MoreOtherNews';
 import "./mainView.css"
 
 const BACKENDURL="http://localhost:4000/";
@@ -16,6 +17,7 @@ function MainView () {
     const [NoticiaPrincipal, SetNoticiaPrincipal] = useState([])
     const [NoticiaSecundaria, SetNoticiaSecundaria] = useState([])
     const [NoticiasRestantes, SetNoticiasRestantes] = useState([])
+    const [OtrasNoticias, SetOtrasNoticias] = useState([])
     const [userLogin, setUserLogin] = useState(currentSession);
 
     useEffect(() => {   
@@ -36,7 +38,8 @@ function MainView () {
                         //SetNoticiaSecundaria(getNoticias.splice(1,4))
                         SetNoticiaPrincipal(readData.splice(0,1))
                         SetNoticiaSecundaria(readData.splice(0,4))
-                        SetNoticiasRestantes(readData.splice(0,15))
+                        SetNoticiasRestantes(readData.splice(0,10))
+                        SetOtrasNoticias(readData.splice(0,15))
             }))
       }, []);
 
@@ -52,7 +55,10 @@ function MainView () {
         (item,idx) => <OtherNews key={idx} id_news={item.id_news} title={item.title} date={item.date} author={item.author} summary={item.summary} src={item.src}/>
     )
 
-   
+    const moreOtherNews = OtrasNoticias.map(
+        (item,idx) => <MoreOtherNews key={idx} id_news={item.id_news} title={item.title} summary={item.summary}/>
+    )
+
     return (
         <>  
             <div className="mainViewContainer">
@@ -73,7 +79,8 @@ function MainView () {
                         {otherNews}
                     </div>
                     <div className='moreOtherNewsList'>
-                        <p>Otras Noticias</p>
+                        <p className='moreOtherNewsListP'>Otras noticias</p>
+                        {moreOtherNews}
                     </div>
                 </div>
 

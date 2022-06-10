@@ -117,6 +117,7 @@ export function deleteNewsController (request,response) {
 
     const { id_news } = request.params;
 
+    // TODO: Eliminar fichero antes de eliminar registro DB
     db.get(
         `SELECT id_news FROM news WHERE id_news=${id_news}`, 
         (err, data)=>{

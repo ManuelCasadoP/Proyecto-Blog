@@ -11,7 +11,7 @@ function FullPageNews(){
 
     const currentSession = sessionStorage.getItem('token') ? true : false
 
-    const [ NoticiaCompleta, SetNoticiaCompleta ]= useState({})
+    const [ NoticiaCompleta, SetNoticiaCompleta ]= useState()
     const [userLogin, setUserLogin] = useState(currentSession);
 
   /*const pathnameActual = window.location.pathname;
@@ -109,24 +109,35 @@ function FullPageNews(){
             <Nav userLogin={userLogin} setUserLogin={setUserLogin}/>
             <Header/>
 
-            <h1 className="fullPageNewsTitle">{NoticiaCompleta.title}</h1>
-            <p className="fullPageNewsSummary">{NoticiaCompleta.summary}</p> 
-            <img className="fullPageNewsImg" src={NoticiaCompleta.src} alt=""/>
+            {
+                NoticiaCompleta ? 
+                    <>
+                        <h1 className="fullPageNewsTitle">{ NoticiaCompleta.title}</h1>
+                        <p className="fullPageNewsSummary">{NoticiaCompleta.summary}</p> 
+                        <img className="fullPageNewsImg" src={NoticiaCompleta.src} alt=""/>
 
-            <div className='fullPageNewsAuthor_Date_Icon'>
-                <div className='fullPageNewsAuthor_and_Date'>
-                    <p className="fullPageNewsAuthor">{NoticiaCompleta.author}</p>
-                    <p className="fullPageNewsDate">{NoticiaCompleta.date}</p> 
-                </div>
-                <div>
-                    {/*Borrado condicional de la Noticia*/}
-                    {userLogin === true ?
-                        <i className=" fullPageNewsIcon fa-solid fa-trash-can" onClick={BorrarNoticia}></i>
-                    : null}        
-                </div>               
-            </div>
+                        <div className='fullPageNewsAuthor_Date_Icon'>
+                            <div className='fullPageNewsAuthor_and_Date'>
+                                <p className="fullPageNewsAuthor">{NoticiaCompleta.author}</p>
+                                <p className="fullPageNewsDate">{NoticiaCompleta.date}</p> 
+                            </div>
+                            <div>
+                                {/*Borrado condicional de la Noticia*/}
+                                {userLogin === true ?
+                                    <i className=" fullPageNewsIcon fa-solid fa-trash-can" onClick={BorrarNoticia}></i>
+                                : null}        
+                            </div>               
+                        </div>
 
-            <p className="fullPageNewsContent">{NoticiaCompleta.content}</p> 
+                        {/*<p className="fullPageNewsContent">{NoticiaCompleta.content}</p>*/}
+
+                        <div className="fullPageNewsContent">{
+                            NoticiaCompleta.content.split('\n').map( (paragraph, idx) =><p key={idx}>{paragraph}</p>)
+                        }</div>
+                    </>
+                 :
+                    <h1>...</h1>
+            }
         
         </div>
     </>

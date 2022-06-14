@@ -41,6 +41,11 @@
     align-items: center;
     justify-content: space-between;
     align-items: baseline;
+    color: #777;
+    font-family: 'Lora', serif;
+    font-size: small;
+    padding: 0px;
+    margin: 0px;
 }
 
 .secondaryNewsDate {
@@ -49,7 +54,6 @@
 }
 
 .secondaryNewsAuthor {
-    cursor: pointer;
     font-family: Tahoma, sans-serif;
     font-size: 12px;
 }

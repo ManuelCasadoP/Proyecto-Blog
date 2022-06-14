@@ -41,8 +41,7 @@
     color: rgb(15, 15, 15);
     font-style: normal;
     font-weight: 400;
-    font-family: 'Lora', serif;
-    
+    font-family: 'Lora', serif; 
     margin: 3px;
     cursor: pointer;
 }
@@ -53,6 +52,10 @@
     align-items: center;
     justify-content: space-between;
     align-items: baseline;
+    color: #777;
+    font-family: 'Lora', serif;
+    font-size: small;
+    padding: 0px;
     margin: 0px;
 
 }
@@ -64,7 +67,6 @@
 
 .otherNewsAuthor {
     margin: 3px;
-    cursor: pointer;
     font-family: Tahoma, sans-serif;
     font-size: 12px;
 }

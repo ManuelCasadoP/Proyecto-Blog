@@ -13,7 +13,9 @@ export default function Nav ({userLogin, setUserLogin}){
         <div className="top">
             <div className="topLeft">
                 <ul className="topList">
-                    <li className="topListItem blogHeadTitle">EL PAíS</li>
+                    <Link to={`/`}>
+                        <li className="topListItem blogHeadTitle">EL PAíS</li>
+                    </Link>
                 </ul>
             </div>
             <div className="topCenter">

@@ -46,7 +46,7 @@
 
 .topListItem {
     margin-right: 20px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     cursor: pointer;
 }
@@ -66,4 +66,10 @@ a {
     color: #666;
     cursor: pointer;
     margin-left: 15px;  
+}
+
+.blogHeadTitle {
+    font-size: 1.875rem;
+    font-weight: 700;
+    font-family: 'Libre Baskerville', serif;
 }

@@ -62,9 +62,7 @@ function MainView () {
     return (
         <>  
             <div className="mainViewContainer">
-                <div className='navView'>
                     <Nav userLogin={userLogin} setUserLogin={setUserLogin}/>
-                </div>
                 <div className="headerView">
                     <Header/>
                 </div>                

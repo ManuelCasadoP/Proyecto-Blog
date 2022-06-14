@@ -1,5 +1,5 @@
 .writeNewsTotalContainer {
-    background-image: url("./Fondo_1.jpg");
+    background-image: url("./Fondo.jpg");
     background-size: cover;
 }
 
@@ -16,7 +16,7 @@
     height: 80%;
     width: 100%;
     /*background-color: rgb(230, 237, 247);*/
-    background-image: url("./Cuaderno_2.png");
+    background-image: url("./Cuaderno.png");
     background-size: cover;
 }
 

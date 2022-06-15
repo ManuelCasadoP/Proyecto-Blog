@@ -134,7 +134,7 @@ export function deleteNewsController (request,response) {
            
     // 3.- Eliminar la noticia 
     db.get(
-        `SELECT id_news FROM news WHERE id_news=${id_news}`, 
+        `SELECT * FROM news WHERE id_news=${id_news}`, 
         (err, data)=>{
             if (err) {
                 console.log(err, `Algo ha funcionado mal...`);

@@ -1,0 +1,7 @@
+// Esta función recibe un string, en este caso una fecha el formato año/mes/día,
+// y devuelve la misma cadena despues de hacerle el "reverse".
+
+
+function convertDigitIn(str){
+   return str.split('/').reverse().join('/');
+}

@@ -1,4 +1,5 @@
 import { db } from "../models/db.mjs";
+import fs from 'fs';
 
 // Controladores para NOTICIAS
 
@@ -118,6 +119,20 @@ export function deleteNewsController (request,response) {
     const { id_news } = request.params;
 
     // TODO: Eliminar fichero antes de eliminar registro DB
+    //-----------------------------------------------------
+    
+    // 1.- Capturar el nombre de la imagen de la ruta completa que devuelve la BD
+    const imagePath = data.src;
+    const imagePathArray = imagePath.split("/");
+    const imagename = imagePathArray[4];
+
+    // 2.- Borrar el fichero de la imagen
+    fs.unlink(`./imgs/${imagename}`, (err) => {
+        if (err) throw err;
+            console.log(`successfully file deleted /imgs/${imagename}`);
+        });
+           
+    // 3.- Eliminar la noticia 
     db.get(
         `SELECT id_news FROM news WHERE id_news=${id_news}`, 
         (err, data)=>{

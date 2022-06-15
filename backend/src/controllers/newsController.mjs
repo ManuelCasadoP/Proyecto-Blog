@@ -1,4 +1,5 @@
 import { db } from "../models/db.mjs";
+import fs from 'fs'
 
 // Controladores para NOTICIAS
 
@@ -117,9 +118,9 @@ export function deleteNewsController (request,response) {
 
     const { id_news } = request.params;
 
-    // TODO: Eliminar fichero antes de eliminar registro DB
+    
     db.get(
-        `SELECT id_news FROM news WHERE id_news=${id_news}`, 
+        `SELECT * FROM news WHERE id_news=${id_news}`, 
         (err, data)=>{
             if (err) {
                 console.log(err, `Algo ha funcionado mal...`);
@@ -127,6 +128,20 @@ export function deleteNewsController (request,response) {
 
             } else if (data){
 
+                // TODO: Eliminar el fichero de la imagen antes de eliminar registro de la noticia de la DB.
+                //-----------------------------------------------------
+                // 1.- Capturar el nombre de la imagen de la ruta completa que devuelve la BD
+                    const imagePath = data.src;
+                    const imagePathArray = imagePath.split("/");
+                    const imagename = imagePathArray[4];
+
+                // 2.- Borrar el fichero de la imagen
+                    fs.unlink(`./imgs/${imagename}`, (err) => {
+                        if (err) throw err;
+                        console.log(`successfully file deleted /imgs/${imagename}`);
+                    });
+               
+                // 3.- Eliminar la noticia    
                 db.run(
                     `DELETE FROM news WHERE id_news=${id_news}`,
                     (err)=>{
@@ -143,7 +158,7 @@ export function deleteNewsController (request,response) {
                 
             } else {
                 console.log(`La noticia no existe...`);
-                response.status(500).send(`<b>Solicitud denegada.<br>
+                response.status(400).send(`<b>Solicitud denegada.<br>
                                            <br> No existe la noticia que quiere eliminar...</b>`);
             }
         }

@@ -23,6 +23,8 @@ export default function WriteNews () {
 	const tiempoTranscurrido = Date.now();
 	const hoy = new Date(tiempoTranscurrido);
 	const fechaActual = hoy.toLocaleDateString();
+	const corrigiendoFecha = fechaActual.split('/');
+	if corrigiendoFecha[1]=
 */
 	const getInfo = (event)=>{
 		setNews({

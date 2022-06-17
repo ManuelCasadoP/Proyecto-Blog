@@ -121,7 +121,7 @@ export default function Login() {
 							<input className="loginInput" type="password" name="password" value={password} onChange={getInfo}/>
 						</div>
 						<div className="fieldForm">
-							<input type="submit" class="loginButton" value="Entrar" />
+							<input type="submit" className="loginButton" value="Entrar" />
 						</div>				
 										
                         <br /><br />

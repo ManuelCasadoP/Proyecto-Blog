@@ -2,10 +2,11 @@ import "./register.css";
 import {Link} from "react-router-dom";
 import{ useState } from 'react';
 import swal from 'sweetalert';
+import host from "../../js/host.mjs";
 
 export default function Register() {
 
-    const host = "http://localhost:4000/api/v0.0/users/register";
+   // const host = "http://localhost:4000/api/v0.0/users/register";
 
 	const [ error, setError ] = useState(false);
 	const [ register, setRegister ] = useState ({
@@ -34,7 +35,7 @@ export default function Register() {
 			return;
 		} else {
 			const data = JSON.stringify(register)
-			post(host, data);
+			post(host+"api/v0.0/users/login", data);
 			setError(false);
 		}
 		

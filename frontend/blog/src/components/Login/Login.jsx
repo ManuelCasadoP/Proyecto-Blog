@@ -2,10 +2,11 @@ import "./login.css";
 import swal from 'sweetalert';
 import {Link} from "react-router-dom";
 import{ useState } from 'react';
+import host from "../../js/host.mjs";
 
 export default function Login() {
 
-    const host = "http://localhost:4000/api/v0.0/users/login";
+    //const host = "http://localhost:4000/api/v0.0/users/login";
 
 	const [ error, setError ] = useState(false);
 	const [ login, setLogin ] = useState ({
@@ -33,7 +34,7 @@ export default function Login() {
 			return;
 		} else {
 			const data = JSON.stringify(login)
-			post(host, data);
+			post(host+"api/v0.0/users/login", data);
 			setError(false);
 		}
 	}

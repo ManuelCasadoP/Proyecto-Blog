@@ -1,4 +1,5 @@
 import express from "express";
+import { config } from "dotenv"
 import { getOneNewsController, getAllNewsController, postNewsController, putNewsController, deleteNewsController } from "./controllers/newsController.mjs";
 import { userRegisterController, userLoginController, getAllUsersController, deleteUserController } from "./controllers/usersController.mjs";
 import authMiddleware from "./middleware/authMiddleware.mjs"
@@ -7,7 +8,7 @@ import multer from "multer";
 
 
 const PATH_PREFIX = "/api/v0.0"
-const PORT =4000;
+if ( process.env.NODE_ENV != "production" ) config()
 
 const app = express();
 
@@ -17,6 +18,7 @@ try {
     app.use(express.json())  
     app.use('/imgs/', express.static('./imgs/'));
     app.use('/', express.static('../frontend/blog/build/'));
+    //app.use("/", express.static("../frontend/blog/build/", {index: "index.html"}))
 
     // EndPoints para /news/
 
@@ -43,8 +45,8 @@ try {
     
    
 
-    app.listen(PORT,()=>{
-        console.log(`Servidor Express funcionando en puerto ${PORT}`);
+    app.listen(process.env.PORT,()=>{
+        console.log(`Servidor Express funcionando en puerto ${process.env.PORT}`);
     });
 
 } catch {

@@ -2,11 +2,12 @@ import Header from "../Header/Header";
 import "./writeNews.css";
 import{ useState } from 'react';
 import swal from 'sweetalert';
+import host from "../../js/host.mjs";
 
 
 export default function WriteNews () {	
 
-	const host = "http://localhost:4000/api/v0.0/news";
+	//const host = "http://localhost:4000/api/v0.0/news";
 
 	const [ error, setError ] = useState(false);
 	const [ news, setNews ] = useState ({
@@ -47,7 +48,7 @@ export default function WriteNews () {
 			return;
 		} else {
 			const data = new FormData(event.target)
-			post(host, data);
+			post(host+"api/v0.0/users/login", data);
 			setError(false);
 		}
 	}

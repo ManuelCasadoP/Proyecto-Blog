@@ -5,9 +5,10 @@ import MainNews from "../../components/MainNews/MainNews"
 import SecondaryNews from "../../components/SecondaryNews/SecondaryNews"
 import OtherNews from '../../components/OtherNews/OtherNews';
 import MoreOtherNews from '../../components/MoreOtherNews/MoreOtherNews';
-import "./mainView.css"
+import "./mainView.css";
+import host from '../../js/host.mjs';
 
-const BACKENDURL="http://localhost:4000/";
+//const BACKENDURL="http://localhost:4000/";
 
 
 function MainView () {
@@ -22,7 +23,7 @@ function MainView () {
 
     useEffect(() => {   
 
-        fetch(BACKENDURL+"api/v0.0/news")
+        fetch(host+"api/v0.0/news")
             .then (
                 data=>data.json()
                 .then(

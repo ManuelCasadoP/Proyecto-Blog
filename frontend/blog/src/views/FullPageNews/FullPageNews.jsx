@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import swal from 'sweetalert';
-import { useParams } from "react-router-dom"
-import Header from "../../components/Header/Header"
-import Nav from "../../components/Nav/Nav"
-import "./fullPageNews.css"
+import { useParams } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import Nav from "../../components/Nav/Nav";
+import "./fullPageNews.css";
+import host from '../../js/host.mjs';
 
-const BACKENDURL="http://localhost:4000/";
+//const BACKENDURL="http://localhost:4000/";
 
 function FullPageNews(){
 
@@ -30,7 +31,7 @@ function FullPageNews(){
             buttons: ["No", "Si"]
         })
         .then(respuesta => {
-            if (respuesta) {deleteNews(BACKENDURL+"api/v0.0/news/"+params.id_news);		
+            if (respuesta) {deleteNews(host+"api/v0.0/news/"+params.id_news);		
             }
         });
     }
@@ -91,7 +92,7 @@ function FullPageNews(){
 
     useEffect(() => {   
 
-        fetch(BACKENDURL+"api/v0.0/news/"+params.id_news)
+        fetch(host+"api/v0.0/news/"+params.id_news)
             .then (
                 data=>data.json()
                 .then(

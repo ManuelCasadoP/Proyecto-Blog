@@ -7,7 +7,8 @@ import multer from "multer";
 
 
 const PATH_PREFIX = "/api/v0.0"
-const PORT = 4000;
+const PORT =4000;
+
 const app = express();
 
 const uploader = multer({dest: './imgs'})
@@ -15,6 +16,7 @@ const uploader = multer({dest: './imgs'})
 try {
     app.use(express.json())  
     app.use('/imgs/', express.static('./imgs/'));
+    app.use('/', express.static('../frontend/blog/build/'));
 
     // EndPoints para /news/
 

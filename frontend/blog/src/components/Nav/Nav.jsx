@@ -18,9 +18,7 @@ export default function Nav ({userLogin, setUserLogin}){
                     </Link>
                 </ul>
             </div>
-            <div className="topCenter">
-
-            </div>
+            
 
             {/*Menú condicionado al LOGIN*/}
             <div className="topRight">

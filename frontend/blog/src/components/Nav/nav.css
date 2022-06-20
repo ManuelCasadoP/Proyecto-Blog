@@ -17,6 +17,13 @@
     justify-content: center;
 }
 
+.topLeft{
+    justify-content: flex-start;
+}
+
+.topRight {
+    justify-content: flex-end;
+}
 .topCenter {
     flex: 6;
 }
@@ -72,4 +79,5 @@ a {
     font-size: 1.875rem;
     font-weight: 700;
     font-family: 'Libre Baskerville', serif;
+    text-align: left;
 }

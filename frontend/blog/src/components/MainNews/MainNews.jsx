@@ -1,5 +1,6 @@
 import "./mainNews.css";
 import { Link } from "react-router-dom";
+import host from "../../js/host.mjs";
 
 function MainNews ({ id_news, title, date, author, summary, src }) {
    
@@ -7,7 +8,7 @@ function MainNews ({ id_news, title, date, author, summary, src }) {
         <>
             <div className="mainNewsContainer">
                 <Link to={`/news/${id_news}`}>
-                    <img className="mainNewsImg" src={src} alt=""/>
+                    <img className="mainNewsImg" src={host+"imgs/"+src} alt=""/>
                 </Link> 
                 <div className="mainNewsText">
                     <Link to={`/news/${id_news}`}>

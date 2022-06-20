@@ -115,7 +115,7 @@ function FullPageNews(){
                     <>
                         <h1 className="fullPageNewsTitle">{ NoticiaCompleta.title}</h1>
                         <p className="fullPageNewsSummary">{NoticiaCompleta.summary}</p> 
-                        <img className="fullPageNewsImg" src={NoticiaCompleta.src} alt=""/>
+                        <img className="fullPageNewsImg" src={host+"imgs/"+NoticiaCompleta.src} alt=""/>
 
                         <div className='fullPageNewsAuthor_Date_Icon'>
                             <div className='fullPageNewsAuthor_and_Date'>

@@ -31,7 +31,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content:space-between;
-               
+        
     }
 
     .otherNewsView {
@@ -76,7 +76,7 @@
     .mainViewContainer {
         display: flex;
         flex-direction: column;
-        max-width: 67vw;
+        max-width: 77vw;
         background-color: white; 
         margin: auto;
     }

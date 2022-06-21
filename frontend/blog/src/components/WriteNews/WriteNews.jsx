@@ -94,7 +94,7 @@ export default function WriteNews () {
 						icon: "success",
 					})
 					.then(ok => {
-						if (ok) {document.location.href = '/write';		
+						if (ok) {document.location.href = '/write/';		
 						}
 					});
 					

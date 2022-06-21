@@ -68,7 +68,7 @@ function FullPageNews(){
                     button: "Aceptar"
                 })
                 .then(ok => {
-                    if (ok) {document.location.href = '/write';
+                    if (ok) {document.location.href = '/write/';
                     }
                 });
             } else {

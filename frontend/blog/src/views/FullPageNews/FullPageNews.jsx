@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import swal from 'sweetalert';
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Nav from "../../components/Nav/Nav";
 import "./fullPageNews.css";
@@ -9,6 +9,8 @@ import host from '../../js/host.mjs';
 //const BACKENDURL="http://localhost:4000/";
 
 function FullPageNews(){
+
+    const navigate = useNavigate();
 
     const currentSession = sessionStorage.getItem('token') ? true : false
 
@@ -68,8 +70,13 @@ function FullPageNews(){
                     button: "Aceptar"
                 })
                 .then(ok => {
+<<<<<<< HEAD
                     if (ok) {document.location.href = '/write/';
                     }
+=======
+                    //if (ok) {document.location.href = '/write/'};
+                    if (ok) navigate('/write/');
+>>>>>>> origin/despliegue
                 });
             } else {
                 console.log("Error gravísiiimo de sabe D10S que...!!!")

@@ -3,11 +3,14 @@ import "./writeNews.css";
 import{ useState } from 'react';
 import swal from 'sweetalert';
 import host from "../../js/host.mjs";
+import { useNavigate } from "react-router-dom";
 
 
 export default function WriteNews () {	
 
 	//const host = "http://localhost:4000/api/v0.0/news";
+
+	const navigate = useNavigate()
 
 	const [ error, setError ] = useState(false);
 	const [ news, setNews ] = useState ({
@@ -94,8 +97,13 @@ export default function WriteNews () {
 						icon: "success",
 					})
 					.then(ok => {
+<<<<<<< HEAD
 						if (ok) {document.location.href = '/write/';		
 						}
+=======
+						//if (ok) {document.location.href = '/write/'};
+						if (ok) navigate('/write/');
+>>>>>>> origin/despliegue
 					});
 					
 				} else if (response.status === 401){	

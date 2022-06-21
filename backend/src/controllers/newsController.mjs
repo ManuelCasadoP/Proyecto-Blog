@@ -132,14 +132,14 @@ export function deleteNewsController (request,response) {
                 // TODO: Eliminar el fichero de la imagen antes de eliminar registro de la noticia de la DB.
                 //-----------------------------------------------------
                 // 1.- Capturar el nombre de la imagen de la ruta completa que devuelve la BD
-                    const imagePath = data.src;
-                    const imagePathArray = imagePath.split("/");
-                    const imagename = imagePathArray[4];
+                    const imageName = data.src;
+                    //const imagePathArray = imagePath.split("/");
+                    //const imagename = imagePathArray[4];
 
                 // 2.- Borrar el fichero de la imagen
-                    fs.unlink(`./imgs/${imagename}`, (err) => {
+                    fs.unlink(`./imgs/${imageName}`, (err) => {
                         if (err) throw err;
-                        console.log(`successfully file deleted /imgs/${imagename}`);
+                        console.log(`successfully file deleted /imgs/${imageName}`);
                     });
                
                 // 3.- Eliminar la noticia    

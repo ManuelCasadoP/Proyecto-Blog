@@ -1,5 +1,5 @@
 import "./nav.css";
-import image from "./Palmeras.jpg"
+import image from "./Avatar.jpg"
 import { Link } from "react-router-dom";
 
 export default function Nav ({userLogin, setUserLogin}){

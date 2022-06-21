@@ -70,13 +70,8 @@ function FullPageNews(){
                     button: "Aceptar"
                 })
                 .then(ok => {
-<<<<<<< HEAD
-                    if (ok) {document.location.href = '/write/';
-                    }
-=======
                     //if (ok) {document.location.href = '/write/'};
                     if (ok) navigate('/write/');
->>>>>>> origin/despliegue
                 });
             } else {
                 console.log("Error gravísiiimo de sabe D10S que...!!!")

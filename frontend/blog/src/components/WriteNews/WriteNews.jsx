@@ -97,13 +97,8 @@ export default function WriteNews () {
 						icon: "success",
 					})
 					.then(ok => {
-<<<<<<< HEAD
-						if (ok) {document.location.href = '/write/';		
-						}
-=======
 						//if (ok) {document.location.href = '/write/'};
 						if (ok) navigate('/write/');
->>>>>>> origin/despliegue
 					});
 					
 				} else if (response.status === 401){	

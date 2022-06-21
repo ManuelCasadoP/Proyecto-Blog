@@ -48,7 +48,8 @@ export default function WriteNews () {
 			return;
 		} else {
 			const data = new FormData(event.target)
-			post(host+"api/v0.0/users/login", data);
+			//post(host+"api/v0.0/users/login", data);
+			post(host+"api/v0.0/news", data);
 			setError(false);
 		}
 	}

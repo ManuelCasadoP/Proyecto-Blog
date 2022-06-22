@@ -5,6 +5,12 @@ import{ useState } from 'react';
 import host from "../../js/host.mjs";
 import { useNavigate } from "react-router-dom";
 
+const blankLogin = {
+	email:"",
+	password:""
+}
+
+
 export default function Login() {
 
     //const host = "http://localhost:4000/api/v0.0/users/login";
@@ -12,10 +18,7 @@ export default function Login() {
 	const navigate = useNavigate()
 
 	const [ error, setError ] = useState(false);
-	const [ login, setLogin ] = useState ({
-		email:"",
-		password:"",
-	});
+	const [ login, setLogin ] = useState (blankLogin);
 
 	const { email, password } = login; 
 
@@ -87,8 +90,9 @@ export default function Login() {
 					button: "Aceptar"
 				})
 				.then(ok => {
-					if (ok) {document.location.href = '/login'};
-					//if (ok) navigate('/login/');
+					//if (ok) {document.location.href = '/login'};
+					setLogin(blankLogin)
+					if (ok) navigate('/login/');
 					
 				});
 			} else {

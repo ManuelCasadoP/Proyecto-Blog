@@ -5,6 +5,12 @@ import swal from 'sweetalert';
 import host from "../../js/host.mjs";
 import { useNavigate } from "react-router-dom";
 
+const blankRegister = {
+	email:"",
+	name:"",
+	password:""
+}
+
 export default function Register() {
 
    // const host = "http://localhost:4000/api/v0.0/users/register";
@@ -12,11 +18,7 @@ export default function Register() {
    const navigate = useNavigate()
 
 	const [ error, setError ] = useState(false);
-	const [ register, setRegister ] = useState ({
-		email:"",
-        name:"",
-		password:"",
-	});
+	const [ register, setRegister ] = useState (blankRegister);
 
 	const { email, name, password } = register; 
 
@@ -85,8 +87,9 @@ export default function Register() {
 					button: "Aceptar"
 				})
 				.then(ok => {
-					if (ok) {document.location.href = '/register'};
-					//if (ok) navigate('/register/');
+					//if (ok) {document.location.href = '/register'};
+					setRegister(blankRegister);
+					if (ok) navigate('/register/');
 					
 				});
 			} else {

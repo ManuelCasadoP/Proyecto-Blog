@@ -98,8 +98,12 @@ export default function WriteNews () {
 						icon: "success",
 					})
 					.then(ok => {
+<<<<<<< HEAD
 						//if (ok) {document.location.href = '/write'};
 						setNews(blankNews)
+=======
+						//if (ok) {document.location.href = '/write/'};
+>>>>>>> fdb82219b7c7c324076366701ee599e97d42fec2
 						if (ok) navigate('/write/');
 					});
 					

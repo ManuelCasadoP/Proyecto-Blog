@@ -87,8 +87,8 @@ export default function Login() {
 					button: "Aceptar"
 				})
 				.then(ok => {
-					//if (ok) {document.location.href = '/login'};
-					if (ok) navigate('/login/');
+					if (ok) {document.location.href = '/login'};
+					//if (ok) navigate('/login/');
 					
 				});
 			} else {

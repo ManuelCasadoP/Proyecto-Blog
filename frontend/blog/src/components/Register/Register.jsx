@@ -3,10 +3,13 @@ import {Link} from "react-router-dom";
 import{ useState } from 'react';
 import swal from 'sweetalert';
 import host from "../../js/host.mjs";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
 
    // const host = "http://localhost:4000/api/v0.0/users/register";
+
+   const navigate = useNavigate()
 
 	const [ error, setError ] = useState(false);
 	const [ register, setRegister ] = useState ({
@@ -68,8 +71,9 @@ export default function Register() {
 					icon: "success",
 				})
 				.then(ok => {
-					if (ok) {document.location.href = '/login';
-					}
+					//if (ok) {document.location.href = '/login'};
+					if (ok) navigate('/login/');
+					
 				});
 				
 			} else if (response.status === 401){	
@@ -81,8 +85,9 @@ export default function Register() {
 					button: "Aceptar"
 				})
 				.then(ok => {
-					if (ok) {document.location.href = '/register';
-					}
+					//if (ok) {document.location.href = '/register'};
+					if (ok) navigate('/register/');
+					
 				});
 			} else {
 				console.log("Error gravísiiimo de sabe D10S que...!!!")

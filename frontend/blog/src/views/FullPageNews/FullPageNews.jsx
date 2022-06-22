@@ -57,8 +57,9 @@ function FullPageNews(){
                     icon: "success",
                 })
                 .then(ok => {
-                    if (ok) {document.location.href = '/';		
-                    }
+                    //if (ok) {document.location.href = '/'};
+                    if (ok) navigate('/');
+                    
                 });
                 
             } else if (response.status === 401){	

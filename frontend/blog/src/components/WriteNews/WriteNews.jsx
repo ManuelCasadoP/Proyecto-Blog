@@ -5,6 +5,14 @@ import swal from 'sweetalert';
 import host from "../../js/host.mjs";
 import { useNavigate } from "react-router-dom";
 
+const blankNews = {
+	title:"",
+	date:"",
+	author:"",
+	summary:"",
+	content:"",
+	src:""
+}
 
 export default function WriteNews () {	
 
@@ -13,14 +21,7 @@ export default function WriteNews () {
 	const navigate = useNavigate()
 
 	const [ error, setError ] = useState(false);
-	const [ news, setNews ] = useState ({
-		title:"",
-		date:"",
-		author:"",
-		summary:"",
-		content:"",
-		src:""
-	});
+	const [ news, setNews ] = useState (blankNews);
 
 	const { title, date, author, summary, content, src } = news; 
 /*
@@ -98,6 +99,7 @@ export default function WriteNews () {
 					})
 					.then(ok => {
 						//if (ok) {document.location.href = '/write'};
+						setNews(blankNews)
 						if (ok) navigate('/write/');
 					});
 					

@@ -35,7 +35,7 @@ export default function Register() {
 			return;
 		} else {
 			const data = JSON.stringify(register)
-			post(host+"api/v0.0/users/login", data);
+			post(host+"api/v0.0/users/register", data);
 			setError(false);
 		}
 		

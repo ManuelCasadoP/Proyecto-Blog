@@ -92,7 +92,7 @@ export default function Login() {
 				.then(ok => {
 					//if (ok) {document.location.href = '/login'};
 					setLogin(blankLogin)
-					if (ok) navigate('/login/');
+					if (ok) navigate('/login');
 					
 				});
 			} else {

@@ -9,11 +9,11 @@ function App() {
   return (
     <>
       <Routes>
-          <Route path="/" element={<MainView/>}/>
-          <Route path="/news/:id_news" element={<FullPageNews/>}/>
-          <Route path="/write/" element={<WriteNews/>}/>
-          <Route path="/login/" element={<Login/>}/>
-          <Route path="/register/" element={<Register/>}/>
+          <Route exact path="/" element={<MainView/>}/>
+          <Route exact path="/news/:id_news" element={<FullPageNews/>}/>
+          <Route exact path="/write" element={<WriteNews/>}/>
+          <Route exact path="/login" element={<Login/>}/>
+          <Route exact path="/register" element={<Register/>}/>
       </Routes>
     </>
   );

@@ -1,9 +1,9 @@
 import "./register.css";
-import {Link} from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 import{ useState } from 'react';
 import swal from 'sweetalert';
 import host from "../../js/host.mjs";
-import { useNavigate } from "react-router-dom";
+
 
 const blankRegister = {
 	email:"",
@@ -74,7 +74,7 @@ export default function Register() {
 				})
 				.then(ok => {
 					//if (ok) {document.location.href = '/login'};
-					if (ok) navigate('/login/');
+					if (ok) navigate('/login');
 					
 				});
 				
@@ -89,7 +89,7 @@ export default function Register() {
 				.then(ok => {
 					//if (ok) {document.location.href = '/register'};
 					setRegister(blankRegister);
-					if (ok) navigate('/register/');
+					if (ok) navigate('/register');
 					
 				});
 			} else {

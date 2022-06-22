@@ -100,7 +100,7 @@ export default function WriteNews () {
 					.then(ok => {
 						//if (ok) {document.location.href = '/write'};
 						setNews(blankNews)
-						if (ok) navigate('/write/');
+						if (ok) navigate('/write');
 					});
 					
 				} else if (response.status === 401){	

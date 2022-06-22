@@ -52,7 +52,7 @@ function FullPageNews(){
             if(response.status===201){
                 console.log("Noticia eliminada correctamente" )
                 swal({
-                    title: "Noticia elimanda correctamente!!!",
+                    title: "Noticia eliminada correctamente!!!",
                     text: "Pulse OK para continuar....",
                     icon: "success",
                 })
@@ -72,7 +72,7 @@ function FullPageNews(){
                 })
                 .then(ok => {
                     //if (ok) {document.location.href = '/write/'};
-                    if (ok) navigate('/write/');
+                    if (ok) navigate('/write');
                 });
             } else {
                 console.log("Error gravísiiimo de sabe D10S que...!!!")

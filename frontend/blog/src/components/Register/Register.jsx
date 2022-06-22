@@ -85,8 +85,8 @@ export default function Register() {
 					button: "Aceptar"
 				})
 				.then(ok => {
-					//if (ok) {document.location.href = '/register'};
-					if (ok) navigate('/register/');
+					if (ok) {document.location.href = '/register'};
+					//if (ok) navigate('/register/');
 					
 				});
 			} else {

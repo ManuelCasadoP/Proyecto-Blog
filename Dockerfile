@@ -15,13 +15,6 @@ RUN rm documentation -rf
 
 WORKDIR /usr/src/app/backend
 RUN npm install --omit=dev
-<<<<<<< HEAD
-RUN rm .gitignore package.json package-lock.json Insomnia_2022-05-10.json node_modules .env -rf
-
-WORKDIR /usr/src/app
-RUN rm deploy documentation -rf
-=======
 RUN rm .gitignore package-lock.json Insomnia_2022-05-10.json .env -rf
->>>>>>> desarrollo
 
 ENTRYPOINT [ "npm", "start" ]

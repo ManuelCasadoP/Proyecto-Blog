@@ -12,9 +12,9 @@ RUN rm .gitignore package.json package-lock.json public README.md src node_modul
 
 WORKDIR /usr/src/app/backend
 RUN npm install --omit=dev
-RUN rm .gitignore package.json package-lock.json Insomnia_2022-05-10.json node_modules -rf
+RUN rm .gitignore package.json package-lock.json Insomnia_2022-05-10.json node_modules .env -rf
 
 WORKDIR /usr/src/app
-RUN rm deploy documentation
+RUN rm documentation -rf
 
 ENTRYPOINT [ "npm", "start" ]

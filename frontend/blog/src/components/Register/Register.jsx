@@ -138,9 +138,12 @@ export default function Register() {
 						</div>		
 								
 						<br /><br />
-						<div className="linkToLogin">
+						<div className="linksRegisterForm">
 							<Link to={`/login`}>
 								<p className="linkToLogin">Si ya tienes cuenta, inicia sesión</p>
+							</Link>
+							<Link to={`/`}>
+						  		<p className="linkToMainView">Volver a inicio</p>
 							</Link>
 						</div>
 						

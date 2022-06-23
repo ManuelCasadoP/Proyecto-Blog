@@ -15,6 +15,6 @@ RUN npm install --omit=dev
 RUN rm .gitignore package.json package-lock.json Insomnia_2022-05-10.json node_modules -rf
 
 WORKDIR /usr/src/app
-RUN rm deploy documentation
+RUN rm deploy documentation -rf
 
 ENTRYPOINT [ "npm", "start" ]

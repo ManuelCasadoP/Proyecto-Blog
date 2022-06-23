@@ -72,7 +72,21 @@ input {
   
 }
 
+.linksRegisterForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .linkToLogin {
+  margin: 0px;
+  color: orange;
+  text-decoration: underline;
+  font-family: 'Lora', sans-serif;
+  display: inline-block;
+}
+
+.linkToMainVeiw {
   margin: 0px;
   color: orange;
   text-decoration: underline;

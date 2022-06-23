@@ -136,9 +136,12 @@ export default function Login() {
 										
                         <br /><br />
 
-						<div className="linkToRegister">
+						<div className="linksLoginForm">
 							<Link to={`/register`}>
 								<p className="linkToRegister">Si no tienes todavia, crea tu cuenta</p>
+							</Link>
+							<Link to={`/`}>
+								<p className="linkToMainView">Volver a inicio</p>
 							</Link>
 						</div>
 					</form>	

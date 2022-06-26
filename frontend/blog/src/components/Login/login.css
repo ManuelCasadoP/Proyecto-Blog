@@ -8,9 +8,11 @@
 }
 
 .loginForm {
+    /*
     padding: 3rem;
     max-width: 600px;
     width: 95%;
+    */
     background-color: #f6f6e0;
     border-radius: 1rem;
 }
@@ -35,7 +37,7 @@ h1 {
 }
 
 .loginLabel {
-    flex: 0 0 100px;
+    /*flex: 0 0 100px;*/
     font-family: 'Lora', sans-serif;
 }
 /*
@@ -79,7 +81,7 @@ input {
 }
 
 .linkToRegister {
-  margin: 0px;
+  /*margin: 0px;*/
   color: orange;
   text-decoration: underline;
   font-family: 'Lora', sans-serif;
@@ -96,4 +98,60 @@ input {
 
 a {
   display: inline-block;
+}
+
+@media only screen and (max-width: 400px) {
+  .fieldForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;    
+  }  
+
+  .loginLabel {
+    display: flex;
+    height:auto;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .loginButton {
+    width: 100%;
+  }
+
+  .linksLoginForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    
+  }
+
+  .loginForm {
+    padding: 3rem;
+    max-width: 600px;
+    width: 95%;
+    background-color: #f6f6e0;
+    border-radius: 1rem;      
+  }  
+
+}
+
+@media only screen and (min-width: 400px) {
+  .loginForm {
+    padding: 3rem;
+    max-width: 600px;
+    width: 95%;
+    background-color: #f6f6e0;
+    border-radius: 1rem;      
+  }  
+
+  .loginLabel {
+    flex: 0 0 100px;
+  }
+
+  .linkToRegister {
+    margin: 0px;
+  }  
 }

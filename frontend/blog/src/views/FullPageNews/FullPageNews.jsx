@@ -25,6 +25,10 @@ function FullPageNews(){
     const params = useParams();
   /*console.log(params.id_news);*/
 
+    function aleatorio(minimo,maximo){
+    return Math.floor(Math.random() * ((maximo+1)-minimo)+minimo);
+    }
+
     function BorrarNoticia(){
         swal({
             title: "Eliminar!!!",
@@ -32,10 +36,40 @@ function FullPageNews(){
             icon: "warning",
             buttons: ["No", "Si"]
         })
+        .then(respuesta =>{
+            if (respuesta){
+                sessionStorage.setItem("code", aleatorio(1000,9999));
+                swal({
+                    title: "Atención!!!",
+                    text: "Para eliminar la noticia, introduzca el código que se ha enviado a su correo",
+                    content: "input",
+                    icon: "info",
+                })
+
+                .then((value)=>{
+                    const code = sessionStorage.getItem("code");
+                    if (value === code){
+                        deleteNews(host+"api/v0.0/news/"+params.id_news)
+                    } else {
+                        swal({
+                            title: "Código incorrecto!!! No puede realizar esta acción.",
+                            text: "Pulse Aceptar para reintentar....",
+                            icon: "warning",
+                            button: "Aceptar"
+                        });
+                        sessionStorage.removeItem("code");
+                    }
+                });
+            } else {
+                sessionStorage.removeItem("code");
+            }
+        });      
+        
+        /*
         .then(respuesta => {
             if (respuesta) {deleteNews(host+"api/v0.0/news/"+params.id_news);		
             }
-        });
+        });*/
     }
 
     async function deleteNews(url){
@@ -50,6 +84,7 @@ function FullPageNews(){
             console.log(response.status);
         ///////////////////////////////////////////////////////////////////////////        
             if(response.status===201){
+                sessionStorage.removeItem("code");
                 console.log("Noticia eliminada correctamente" )
                 swal({
                     title: "Noticia eliminada correctamente!!!",

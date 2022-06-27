@@ -29,7 +29,7 @@ export default function Nav ({userLogin, setUserLogin}){
             if (RedactarNoticia) {
                 navigate('/write')
             } else {
-                swal("Todavía estamos implantando esta opción");
+                swal("Sorry, Todavía estamos implementando esta opción");
             }
           });
     }
@@ -46,9 +46,11 @@ export default function Nav ({userLogin, setUserLogin}){
 
     useEffect(
         ()=>{
-            decodeJwtForUsername()
+            if (userLogin===true){
+                    decodeJwtForUsername()
+            }
         },
-        []
+        [userLogin]
     )
     return(
         <div className="top">

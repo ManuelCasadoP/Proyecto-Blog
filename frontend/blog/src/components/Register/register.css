@@ -35,7 +35,7 @@ h1 {
 }
 
 .registerLabel {
-    flex: 0 0 100px;
+    /*flex: 0 0 100px;*/
     font-family: 'Lora', sans-serif;
 }
 /*
@@ -79,7 +79,7 @@ input {
 }
 
 .linkToLogin {
-  margin: 0px;
+  /*margin: 0px;*/
   color: orange;
   text-decoration: underline;
   font-family: 'Lora', sans-serif;
@@ -96,4 +96,60 @@ input {
 
 a {
   display: inline-block;
+}
+
+@media only screen and (max-width: 400px) {
+  .fieldForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;    
+  }  
+
+  .registerLabel {
+    display: flex;
+    height:auto;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .registerButton {
+    width: 100%;
+  }
+
+  .linksRegisterForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    
+  }
+
+  .registerForm {
+    padding: 3rem;
+    max-width: 600px;
+    width: 95%;
+    background-color: #f6f6e0;
+    border-radius: 1rem;      
+  }  
+
+}
+
+@media only screen and (min-width: 400px) {
+  .registerForm {
+    padding: 3rem;
+    max-width: 600px;
+    width: 95%;
+    background-color: #f6f6e0;
+    border-radius: 1rem;      
+  }  
+
+  .registerLabel {
+    flex: 0 0 100px;
+  }
+
+  .linkToLogin {
+    margin: 0px;
+  }  
 }

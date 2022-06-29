@@ -64,19 +64,20 @@ export function userRegisterController (request, response) {
             } else if (data){
 
                 db.get(
-                    `SELECT password FROM users WHERE email="${email}"`,
+                    `SELECT * FROM users WHERE email="${email}"`,
                         (err, data)=>{
                             if (err) {
                                 console.log(`Algo ha funcionado mal...`, err);
                                 response.status(500).send(`<b>Algo ha funcionado mal:<br>${err}</b>`);
                                     } else if (data){
                                         console.log (data.password);
-                                        console.log (password)
+                                        console.log(data.name);
+                                        console.log (password);
                                         const pass = bcrypt.compareSync(password, data.password);
                                         if(pass===true) {
                                             console.log("Login de usuario correcto");
                                             const token = jwt.sign(
-                                                {email},
+                                                {name: data.name},
                                                 process.env.TOKEN_KEY,
                                                 {
                                                   expiresIn: "2h",

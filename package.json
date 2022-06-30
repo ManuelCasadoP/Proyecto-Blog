@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@mysql/xdevapi": "^8.0.29",
+    "dotenv": "^16.0.1",
     "mongodb": "^4.7.0"
   }
 }

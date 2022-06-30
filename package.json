@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@mysql/xdevapi": "^8.0.29"
+    "@mysql/xdevapi": "^8.0.29",
+    "mongodb": "^4.7.0"
   }
 }

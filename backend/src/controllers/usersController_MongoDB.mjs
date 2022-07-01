@@ -1,4 +1,4 @@
-import { db } from "../models/db.mjs";
+//import { db } from "../models/db.mjs";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import  'dotenv/config';

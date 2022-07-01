@@ -1,4 +1,4 @@
-import { db } from "../models/db.mjs";
+//import { db } from "../models/db.mjs";
 import fs from 'fs'
 
 // Controladores para NOTICIAS

@@ -1,11 +1,36 @@
-//import { db } from "../models/db.mjs";
+import { news, users } from "../models/db.mjs";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import  'dotenv/config';
 
+export async function userRegisterController (request, response) {
+    
+    const { email, name, password } = request.body;
+    const pass =  bcrypt.hashSync(password, 10);
+
+    const findUserEmail = await users.findOne({email});
+
+        if (findUserEmail){
+            console.log("No se puede realizar la operación, ya existe un usuario registrado con ese email.");
+            console.log(findUserEmail)
+            response.status(401).send(`<b>Solicitud denegada. <br>
+                                    <br> No se puede realizar la operación porque ya existe un usuario registrado con ese email.<br>
+                                    <br> Intente registrarse con un email distinto.</b>`);
+
+        } else {
+            const insertUser = await users.insertOne ({email, name, pass});
+                console.log("Usuario añadido a BBDD");
+                console.log(insertUser);
+                response.status(201).send(`<b>Solicitud Aceptada<br>
+                                        <br>El usuario se ha añadido correctamente a la Base de Datos.</b>`);
+        }
+}                  
+        
+
 /**
  *  Controlador para registrar un usuario.
  */
+/*
 export function userRegisterController (request, response) {
     
     const { email, name, password } = request.body;
@@ -42,6 +67,7 @@ export function userRegisterController (request, response) {
         }
     )
 }
+*/
 
 /**
  *  Controlador para login de usuario.

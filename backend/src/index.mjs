@@ -1,7 +1,7 @@
 import express from "express";
 import { config } from "dotenv"
-import { getOneNewsController, getAllNewsController, postNewsController, putNewsController, deleteNewsController } from "./controllers/newsController.mjs";
-import { userRegisterController, userLoginController, getAllUsersController, deleteUserController } from "./controllers/usersController.mjs";
+import { getOneNewsController, getAllNewsController, postNewsController, putNewsController, deleteNewsController } from "./controllers/newsController_MongoDB.mjs";
+import { userRegisterController, userLoginController, getAllUsersController, deleteUserController } from "./controllers/usersController_MongoDB.mjs";
 import authMiddleware from "./middleware/authMiddleware.mjs"
 //import { validateUserRegister } from "./middleware/userValidatorSchema.mjs";
 import multer from "multer";

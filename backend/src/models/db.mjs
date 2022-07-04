@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const db = new MongoClient("mongodb://mongo:02oslgMpCYAolLZIIQYq@containers-us-west-72.railway.app:6646")
+const db = new MongoClient(process.env.URL_db)
 
 db.connect(console.log("Conectado a la Base de Datos NOTICIAS"));
 

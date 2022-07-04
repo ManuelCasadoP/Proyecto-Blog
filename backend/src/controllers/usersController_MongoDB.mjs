@@ -33,18 +33,18 @@ export async function userLoginController (request, response) {
     
     const { email, password } = request.body;
     
-    const findUserEmail = await users.findOne({email});
+    const findUser = await users.findOne({email});
 
-    if (!findUserEmail){
+    if (!findUser){
         console.log("No existe ningun usuario registrado con ese email.");
-        console.log(findUserEmail)
+        console.log(findUser)
         response.status(401).send(`<b>Solicitud denegada. <br>
                                    <br> No se puede realizar la operación porque no existe ningun usuario con ese email.<br>
                                    <br> Intente hacer login con un email distinto.</b>`);
 
     } else {
-        const findUserPassword = await users.findOne({password});
-        const pass = bcrypt.compareSync(password, findUserPassword);
+        //const findUserPassword = await users.findOne({password});
+        const pass = bcrypt.compareSync(password, findUser.pass);
 
         if(pass===true) {
             console.log("Login de usuario correcto");

@@ -1,11 +1,26 @@
-//import { db } from "../models/db.mjs";
+import { news } from "../models/db.mjs";
 import fs from 'fs'
 
-// Controladores para NOTICIAS
+// Controlador para buscar una noticia
 
-/**
-/* Controlador para buscar una noticia
-*/
+export async function getOneNewsController (request, response){
+    const { id_news } = request.params;
+
+    const findOneNews = await news.findOne({id_news});
+
+    if (!findOneNews){
+            console.log("No se puede realizar la operación, no existe la noticia.");
+            response.status(404).send(`<b>Solicitud denegada. <br>
+                                       <br> No se puede realizar la operación porque no existe la noticia.<br>
+                                       <br> Introduzca otro id de noticia.</b>`);
+
+    } else {
+            response.json(findOneNews);
+            console.log(findOneNews);
+    }
+}
+
+/*
 export function getOneNewsController (request, response){
 
     const { id_news } = request.params;
@@ -28,10 +43,19 @@ export function getOneNewsController (request, response){
             }
         });
 }
+*/
 
-/**
- * Controlador para buscar todas las noticias
- */
+
+// Controlador para buscar todas las noticias
+
+export async function getAllNewsController (request, response){
+
+    const findAllNews = news.find({id_news, title, date, author,summary,content,src});
+
+    console.log(findAllNews);
+    response.json(findAllNews);
+}
+/*
 export function getAllNewsController (request, response){
 
     db.all(
@@ -46,6 +70,7 @@ export function getAllNewsController (request, response){
             }
         });
 }
+*/
 
 /**
  * Controlador para publicar una noticia

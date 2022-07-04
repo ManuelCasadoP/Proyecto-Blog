@@ -174,7 +174,7 @@ export function userRegisterController (request, response) {
 /**
  * Controlador para listar todos los usuarios.
  */
-/*
+
  export function getAllUsersController (request, response){
 
     db.all(
@@ -189,11 +189,11 @@ export function userRegisterController (request, response) {
             }
         });
 }
-*/
+
 /**
  * Controlador para eliminar un usuario. 
  */
-/*
+
 export function deleteUserController (request,response) {
 
     const { id_user } = request.body;
@@ -229,4 +229,3 @@ export function deleteUserController (request,response) {
         }
     )
 }
-*/

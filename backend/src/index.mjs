@@ -1,7 +1,7 @@
 import express from "express";
 import { config } from "dotenv"
 import { getOneNewsController, getAllNewsController, postNewsController, putNewsController, deleteNewsController } from "./controllers/newsController_MongoDB.mjs";
-import { userRegisterController, userLoginController, getAllUsersController, deleteUserController } from "./controllers/usersController_MongoDB.mjs";
+import { userRegisterController, userLoginController } from "./controllers/usersController_MongoDB.mjs";
 import authMiddleware from "./middleware/authMiddleware.mjs"
 //import { validateUserRegister } from "./middleware/userValidatorSchema.mjs";
 import multer from "multer";
@@ -35,13 +35,13 @@ try {
 
     // EndPoints para /users/
 
-    app.get(PATH_PREFIX+"/users/", getAllUsersController);
+    //app.get(PATH_PREFIX+"/users/", getAllUsersController);
 
     app.post(PATH_PREFIX+"/users/register", userRegisterController);
 
     app.post(PATH_PREFIX+"/users/login", userLoginController);
 
-    app.delete(PATH_PREFIX+"/users/id_user", deleteUserController);
+    //app.delete(PATH_PREFIX+"/users/id_user", deleteUserController);
     
    
 

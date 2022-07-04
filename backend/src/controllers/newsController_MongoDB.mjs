@@ -50,7 +50,7 @@ export function getOneNewsController (request, response){
 
 export async function getAllNewsController (request, response){
 
-    const findAllNews = news.find({id_news, title, date, author,summary,content,src});
+    const findAllNews = news.find({title, date, author,summary,content,src});
 
     console.log(findAllNews);
     response.json(findAllNews);

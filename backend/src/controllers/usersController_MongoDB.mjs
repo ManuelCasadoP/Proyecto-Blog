@@ -49,7 +49,7 @@ export async function userLoginController (request, response) {
         if(pass===true) {
             console.log("Login de usuario correcto");
             const token = jwt.sign(
-                {name: data.name},
+                {name: findUser.name},
                     process.env.TOKEN_KEY,
                     {
                       expiresIn: "2h",

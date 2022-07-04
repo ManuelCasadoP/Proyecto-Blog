@@ -3,6 +3,8 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import  'dotenv/config';
 
+
+// Controlador para Registrar un usuario
 export async function userRegisterController (request, response) {
     
     const { email, name, password } = request.body;
@@ -25,7 +27,47 @@ export async function userRegisterController (request, response) {
                                         <br>El usuario se ha añadido correctamente a la Base de Datos.</b>`);
         }
 }                  
-        
+
+// Controlador para Login de un usuario
+export async function userLoginController (request, response) {
+    
+    const { email, password } = request.body;
+    
+    const findUserEmail = await users.findOne({email});
+
+    if (!findUserEmail){
+        console.log("No existe ningun usuario registrado con ese email.");
+        console.log(findUserEmail)
+        response.status(401).send(`<b>Solicitud denegada. <br>
+                                   <br> No se puede realizar la operación porque no existe ningun usuario con ese email.<br>
+                                   <br> Intente hacer login con un email distinto.</b>`);
+
+    } else {
+        const findUserPassword = await users.findOne({password});
+        const pass = bcrypt.compareSync(password, findUserPassword);
+
+        if(pass===true) {
+            console.log("Login de usuario correcto");
+            const token = jwt.sign(
+                {name: data.name},
+                    process.env.TOKEN_KEY,
+                    {
+                      expiresIn: "2h",
+                    }
+            );
+            console.log (token);
+            response.status(200).json({
+                message: `<b>Login de usuario correcto.</b>`,
+                token: token
+            });
+            
+        } else {
+                console.log("Password incorrecto");
+                response.status(400).send(`<b>Solicitud denegada<br><br>Password incorrecto.</b>`);
+            }    
+                
+    }
+}                  
 
 /**
  *  Controlador para registrar un usuario.
@@ -72,6 +114,7 @@ export function userRegisterController (request, response) {
 /**
  *  Controlador para login de usuario.
  */
+/*
  export function userLoginController (request, response) {
     
     const { email, password } = request.body;
@@ -127,10 +170,11 @@ export function userRegisterController (request, response) {
         }
     )
 }
-
+*/
 /**
  * Controlador para listar todos los usuarios.
  */
+/*
  export function getAllUsersController (request, response){
 
     db.all(
@@ -145,10 +189,11 @@ export function userRegisterController (request, response) {
             }
         });
 }
-
+*/
 /**
  * Controlador para eliminar un usuario. 
  */
+/*
 export function deleteUserController (request,response) {
 
     const { id_user } = request.body;
@@ -184,3 +229,4 @@ export function deleteUserController (request,response) {
         }
     )
 }
+*/

@@ -50,10 +50,9 @@ export function getOneNewsController (request, response){
 
 export async function getAllNewsController (request, response){
 
-    const findAllNews = news.find({title, date, author,summary,content,src});
+    const cursor = news.find({}).sort({"date":-1});
 
-    console.log(findAllNews);
-    response.json(findAllNews);
+    response.json(await cursor.toArray());
 }
 /*
 export function getAllNewsController (request, response){
@@ -72,9 +71,22 @@ export function getAllNewsController (request, response){
 }
 */
 
-/**
- * Controlador para publicar una noticia
- */
+// Controlador para publicar una noticia
+
+export async function postNewsController (request, response) {    
+
+    const { title, date, author, summary, content } = request.body;
+    
+    const src = request.file.filename;
+
+    const postNews = await news.insertOne ({title, date, author, summary, content, src });
+
+        console.log("Noticia añadida a BBDD");
+        response.status(201).send(`<b>Solicitud Aceptada<br>
+                                   <br>La noticia se ha añadido correctamente a la Base de Datos.</b>`);
+}
+
+/*
 export function postNewsController (request, response) {
     
 
@@ -97,7 +109,7 @@ export function postNewsController (request, response) {
             }
         )
 }
-
+*/
 /**
  * Controlador para modificar una noticia
  */

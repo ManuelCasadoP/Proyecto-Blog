@@ -8,9 +8,6 @@ import MoreOtherNews from '../../components/MoreOtherNews/MoreOtherNews';
 import "./mainView.css";
 import host from '../../js/host.mjs';
 
-//const BACKENDURL="http://localhost:4000/";
-
-
 function MainView () {
 
     const currentSession = sessionStorage.getItem('token') ? true : false
@@ -28,15 +25,6 @@ function MainView () {
                 data=>data.json()
                 .then(
                     readData => {
-                        //const getNoticias = readData;
-                        //const mainNews = getNoticias.splice(1,1)
-                        //const secondNews = getNoticias.splice(1,4)
-                        //const mainNews = readData.splice(1,1)
-                        //const secondNews = readData.splice(1,4)
-                        //SetNoticiaPrincipal(mainNews)
-                        //SetNoticiaSecundaria(secondNews)
-                        //SetNoticiaPrincipal(getNoticias.splice(1,1))
-                        //SetNoticiaSecundaria(getNoticias.splice(1,4))
                         SetNoticiaPrincipal(readData.splice(0,1))
                         SetNoticiaSecundaria(readData.splice(0,4))
                         SetNoticiasRestantes(readData.splice(0,10))

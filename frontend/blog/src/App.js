@@ -5,6 +5,7 @@ import WriteNews from "./components/WriteNews/WriteNews";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 
+
 function App() {
   return (
     <>
